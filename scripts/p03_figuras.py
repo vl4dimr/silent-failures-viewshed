@@ -192,7 +192,7 @@ def figura2():
     cob_full = cobertura_orientaciones(dem, dc, dr)
     cob_tight = cobertura_orientaciones(dem, dc, dr, reg)
 
-    fig = plt.figure(figsize=(6.35, 4.5))
+    fig = plt.figure(figsize=(6.95, 4.9))
     gs = fig.add_gridspec(2, 2, width_ratios=[1.55, 1], hspace=0.42, wspace=0.16)
 
     # (a) el paisaje
