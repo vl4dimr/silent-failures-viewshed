@@ -1,6 +1,6 @@
 {
-  "ok": 51,
-  "fallos": 1,
+  "ok": 52,
+  "fallos": 0,
   "items": [
     {
       "bloque": "formato",
@@ -47,8 +47,8 @@
     {
       "bloque": "figuras",
       "check": "fig_laboratorio.png: resolución",
-      "ok": false,
-      "detalle": "1763x1346 px, 299 dpi"
+      "ok": true,
+      "detalle": "1822x1404 px, 299 dpi"
     },
     {
       "bloque": "figuras",
