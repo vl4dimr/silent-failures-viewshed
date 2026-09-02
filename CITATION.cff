@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: If you use this benchmark or laboratory, please cite it as below.
+title: >-
+  Reproducible and wrong: silent failures in archaeological visibility
+  analysis and a benchmark to catch them — code, benchmark and landscape
+  laboratory
+type: software
+authors:
+  - given-names: Milton Vladimir
+    family-names: Mamani Calisaya
+    orcid: 'https://orcid.org/0000-0002-0676-0989'
+    affiliation: Universidad Nacional del Altiplano, Puno, Perú
+license: MIT
+repository-code: 'https://github.com/vl4dimr/silent-failures-viewshed'
+keywords:
+  - viewshed analysis
+  - software validation
+  - mutation testing
+  - computational reproducibility
+  - null models

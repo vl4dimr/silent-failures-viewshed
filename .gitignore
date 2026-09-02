@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+~$*.docx
+
+# El manuscrito va a la revista, no al repositorio: la revision es ciega.
+manuscript_silent_failures.docx
+ENVIO_JAS/
+NOTAS_PLAN.md
+datos_*.txt

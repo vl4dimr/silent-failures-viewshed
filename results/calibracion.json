@@ -1,0 +1,2684 @@
+{
+  "config": {
+    "replicas": 60,
+    "n_null": 199,
+    "k_mejor": 40,
+    "margen_ajustado_celdas": 25,
+    "alfa": 0.05,
+    "semilla_base": 20260830
+  },
+  "replicas": [
+    {
+      "semilla": 0,
+      "theta_grados": 114.65310371786177,
+      "S0": {
+        "densidad": 0.31048387096774194,
+        "desalineacion_grados": 55.19727333339333,
+        "correcto": {
+          "z": 0.4260814956824551,
+          "p": 0.29
+        },
+        "agua": {
+          "z": -0.11798114990966399,
+          "p": 0.4
+        },
+        "recorte": {
+          "z": 1.3654911183604843,
+          "p": 0.125,
+          "cobertura": 0.5
+        }
+      },
+      "S1": {
+        "densidad": 0.7258064516129032,
+        "desalineacion_grados": 82.09013488498834,
+        "correcto": {
+          "z": 4.525303470337833,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 2.398418048527781,
+          "p": 0.05
+        },
+        "recorte": {
+          "z": 2.4510262691648315,
+          "p": 0.02,
+          "cobertura": 0.35555555555555557
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6683417085427136,
+        "agua_fraccion_celdas": 0.22550251256281406,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 1,
+      "theta_grados": 92.1278924460462,
+      "S0": {
+        "densidad": 0.20967741935483872,
+        "desalineacion_grados": 17.276226121967536,
+        "correcto": {
+          "z": -0.8559780341927886,
+          "p": 0.845
+        },
+        "agua": {
+          "z": -0.8810819706139025,
+          "p": 0.925
+        },
+        "recorte": {
+          "z": -0.13132500081042414,
+          "p": 0.445,
+          "cobertura": 0.31666666666666665
+        }
+      },
+      "S1": {
+        "densidad": 0.6975806451612904,
+        "desalineacion_grados": 82.35851091544488,
+        "correcto": {
+          "z": 3.8914813888932827,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 1.7905680445494465,
+          "p": 0.085
+        },
+        "recorte": {
+          "z": 1.9050543080353286,
+          "p": 0.02,
+          "cobertura": 0.22777777777777777
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.678391959798995,
+        "agua_fraccion_celdas": 0.21749371859296482,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 2,
+      "theta_grados": 47.09018416487695,
+      "S0": {
+        "densidad": 0.4012096774193548,
+        "desalineacion_grados": 67.49015644430739,
+        "correcto": {
+          "z": 2.275220905034667,
+          "p": 0.055
+        },
+        "agua": {
+          "z": 0.45828529992693223,
+          "p": 0.215
+        },
+        "recorte": {
+          "z": 2.5159543175931525,
+          "p": 0.03,
+          "cobertura": 0.45555555555555555
+        }
+      },
+      "S1": {
+        "densidad": 0.530241935483871,
+        "desalineacion_grados": 80.33018080807487,
+        "correcto": {
+          "z": 4.01643070232595,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 1.1829837826522127,
+          "p": 0.14
+        },
+        "recorte": {
+          "z": 3.419733147371849,
+          "p": 0.02,
+          "cobertura": 0.5611111111111111
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6432160804020101,
+        "agua_fraccion_celdas": 0.22817211055276382,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 3,
+      "theta_grados": 15.416850085852387,
+      "S0": {
+        "densidad": 0.19556451612903225,
+        "desalineacion_grados": 18.10698829503486,
+        "correcto": {
+          "z": -0.3763780948240834,
+          "p": 0.52
+        },
+        "agua": {
+          "z": -0.7533292045990562,
+          "p": 0.73
+        },
+        "recorte": {
+          "z": 0.6059865171479067,
+          "p": 0.295,
+          "cobertura": 0.5833333333333334
+        }
+      },
+      "S1": {
+        "densidad": 0.4899193548387097,
+        "desalineacion_grados": 88.44823099071019,
+        "correcto": {
+          "z": 2.8898373075113137,
+          "p": 0.03
+        },
+        "agua": {
+          "z": 0.9262983535638617,
+          "p": 0.15
+        },
+        "recorte": {
+          "z": 1.8604928576209174,
+          "p": 0.08,
+          "cobertura": 0.2611111111111111
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7185929648241206,
+        "agua_fraccion_celdas": 0.25895100502512564,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 4,
+      "theta_grados": 169.75009900302618,
+      "S0": {
+        "densidad": 0.1935483870967742,
+        "desalineacion_grados": 34.29400539047055,
+        "correcto": {
+          "z": -0.7004565531679834,
+          "p": 0.795
+        },
+        "agua": {
+          "z": -0.8127667483601475,
+          "p": 0.825
+        },
+        "recorte": {
+          "z": -0.1672908929351583,
+          "p": 0.51,
+          "cobertura": 0.4111111111111111
+        }
+      },
+      "S1": {
+        "densidad": 0.5383064516129032,
+        "desalineacion_grados": 89.85687477048015,
+        "correcto": {
+          "z": 2.0912787534323107,
+          "p": 0.06
+        },
+        "agua": {
+          "z": 1.4703469779026441,
+          "p": 0.075
+        },
+        "recorte": {
+          "z": 0.4136001058735499,
+          "p": 0.35,
+          "cobertura": 0.2611111111111111
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7085427135678392,
+        "agua_fraccion_celdas": 0.239321608040201,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 5,
+      "theta_grados": 144.90052627416844,
+      "S0": {
+        "densidad": 0.26814516129032256,
+        "desalineacion_grados": 24.286906324516874,
+        "correcto": {
+          "z": -0.6538504153762766,
+          "p": 0.73
+        },
+        "agua": {
+          "z": -0.7225227074233341,
+          "p": 0.785
+        },
+        "recorte": {
+          "z": -1.049137954793523,
+          "p": 0.935,
+          "cobertura": 0.2777777777777778
+        }
+      },
+      "S1": {
+        "densidad": 0.7923387096774194,
+        "desalineacion_grados": 78.65370523588189,
+        "correcto": {
+          "z": 3.0381959113255177,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 2.3570822750367775,
+          "p": 0.045
+        },
+        "recorte": {
+          "z": 3.672439077798193,
+          "p": 0.005,
+          "cobertura": 0.4111111111111111
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6331658291457286,
+        "agua_fraccion_celdas": 0.197393216080402,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 6,
+      "theta_grados": 96.86958326494977,
+      "S0": {
+        "densidad": 0.19153225806451613,
+        "desalineacion_grados": 65.49611539412228,
+        "correcto": {
+          "z": -0.45174309745153163,
+          "p": 0.635
+        },
+        "agua": {
+          "z": -0.6578584616279538,
+          "p": 0.775
+        },
+        "recorte": {
+          "z": -0.833864722406844,
+          "p": 0.825,
+          "cobertura": 0.5333333333333333
+        }
+      },
+      "S1": {
+        "densidad": 0.625,
+        "desalineacion_grados": 84.84311176986867,
+        "correcto": {
+          "z": 3.579927412449132,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 2.193861323655937,
+          "p": 0.065
+        },
+        "recorte": {
+          "z": 1.3876460196041611,
+          "p": 0.105,
+          "cobertura": 0.16111111111111112
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7487437185929648,
+        "agua_fraccion_celdas": 0.2496859296482412,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 7,
+      "theta_grados": 112.51718398884006,
+      "S0": {
+        "densidad": 0.26411290322580644,
+        "desalineacion_grados": 51.659731564745066,
+        "correcto": {
+          "z": -0.31506577557798315,
+          "p": 0.52
+        },
+        "agua": {
+          "z": -0.5504008812809391,
+          "p": 0.635
+        },
+        "recorte": {
+          "z": -0.00642305600968924,
+          "p": 0.375,
+          "cobertura": 0.5222222222222223
+        }
+      },
+      "S1": {
+        "densidad": 0.6028225806451613,
+        "desalineacion_grados": 74.71286362707508,
+        "correcto": {
+          "z": 2.5126601329114453,
+          "p": 0.04
+        },
+        "agua": {
+          "z": 1.2976459463764232,
+          "p": 0.12
+        },
+        "recorte": {
+          "z": 2.0759939340312212,
+          "p": 0.055,
+          "cobertura": 0.5833333333333334
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6733668341708543,
+        "agua_fraccion_celdas": 0.24214824120603015,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 8,
+      "theta_grados": 58.855009789000924,
+      "S0": {
+        "densidad": 0.3165322580645161,
+        "desalineacion_grados": 49.15134559706294,
+        "correcto": {
+          "z": 0.13332353456338913,
+          "p": 0.38
+        },
+        "agua": {
+          "z": -0.4589755522191613,
+          "p": 0.63
+        },
+        "recorte": {
+          "z": 0.2577719196587649,
+          "p": 0.35,
+          "cobertura": 0.3611111111111111
+        }
+      },
+      "S1": {
+        "densidad": 0.5181451612903226,
+        "desalineacion_grados": 63.66165043805237,
+        "correcto": {
+          "z": 2.0928053202439236,
+          "p": 0.055
+        },
+        "agua": {
+          "z": 0.7884450281087969,
+          "p": 0.155
+        },
+        "recorte": {
+          "z": 0.9104691489166634,
+          "p": 0.23,
+          "cobertura": 0.2222222222222222
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6834170854271356,
+        "agua_fraccion_celdas": 0.2559673366834171,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 9,
+      "theta_grados": 156.64485671461523,
+      "S0": {
+        "densidad": 0.17540322580645162,
+        "desalineacion_grados": 16.510306500591348,
+        "correcto": {
+          "z": -0.8654388439940366,
+          "p": 0.86
+        },
+        "agua": {
+          "z": -0.8582933394984064,
+          "p": 0.955
+        },
+        "recorte": {
+          "z": -0.6104602604889949,
+          "p": 0.72,
+          "cobertura": 0.2111111111111111
+        }
+      },
+      "S1": {
+        "densidad": 0.5161290322580645,
+        "desalineacion_grados": 87.78609588628875,
+        "correcto": {
+          "z": 2.2685736209961043,
+          "p": 0.05
+        },
+        "agua": {
+          "z": 1.1021293242255072,
+          "p": 0.145
+        },
+        "recorte": {
+          "z": 0.9594291823981961,
+          "p": 0.195,
+          "cobertura": 0.45
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.8542713567839196,
+        "agua_fraccion_celdas": 0.23853643216080403,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 10,
+      "theta_grados": 172.08030773321556,
+      "S0": {
+        "densidad": 0.24798387096774194,
+        "desalineacion_grados": 50.13085600461164,
+        "correcto": {
+          "z": 0.1853708588326265,
+          "p": 0.32
+        },
+        "agua": {
+          "z": -0.2608323897414225,
+          "p": 0.435
+        },
+        "recorte": {
+          "z": 0.228061023339653,
+          "p": 0.36,
+          "cobertura": 0.4666666666666667
+        }
+      },
+      "S1": {
+        "densidad": 0.7459677419354839,
+        "desalineacion_grados": 82.62306264248319,
+        "correcto": {
+          "z": 5.0500445503436255,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 2.5990146887685377,
+          "p": 0.045
+        },
+        "recorte": {
+          "z": 2.7998063463455356,
+          "p": 0.015,
+          "cobertura": 0.16111111111111112
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7587939698492462,
+        "agua_fraccion_celdas": 0.24874371859296482,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 11,
+      "theta_grados": 23.14263649845593,
+      "S0": {
+        "densidad": 0.20967741935483872,
+        "desalineacion_grados": 13.820033069530343,
+        "correcto": {
+          "z": -0.35530221383129384,
+          "p": 0.495
+        },
+        "agua": {
+          "z": -0.6413176031726091,
+          "p": 0.7
+        },
+        "recorte": {
+          "z": 0.20168700131827008,
+          "p": 0.22,
+          "cobertura": 0.6166666666666667
+        }
+      },
+      "S1": {
+        "densidad": 0.6834677419354839,
+        "desalineacion_grados": 81.05053305717054,
+        "correcto": {
+          "z": 4.322543515284834,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 2.426210034381555,
+          "p": 0.035
+        },
+        "recorte": {
+          "z": 3.695820443667378,
+          "p": 0.015,
+          "cobertura": 0.31666666666666665
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7336683417085427,
+        "agua_fraccion_celdas": 0.25847989949748745,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 12,
+      "theta_grados": 45.1484024595203,
+      "S0": {
+        "densidad": 0.2560483870967742,
+        "desalineacion_grados": 15.403507581968897,
+        "correcto": {
+          "z": -0.08355109062283812,
+          "p": 0.465
+        },
+        "agua": {
+          "z": -0.43040816832976714,
+          "p": 0.595
+        },
+        "recorte": {
+          "z": -0.18759839698251618,
+          "p": 0.555,
+          "cobertura": 0.5055555555555555
+        }
+      },
+      "S1": {
+        "densidad": 0.36693548387096775,
+        "desalineacion_grados": 87.06655065398878,
+        "correcto": {
+          "z": 1.2792904695365606,
+          "p": 0.09
+        },
+        "agua": {
+          "z": 0.33807754168153803,
+          "p": 0.235
+        },
+        "recorte": {
+          "z": 0.8210011094716708,
+          "p": 0.2,
+          "cobertura": 0.3888888888888889
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6080402010050251,
+        "agua_fraccion_celdas": 0.16959798994974876,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 13,
+      "theta_grados": 155.66356566298558,
+      "S0": {
+        "densidad": 0.1310483870967742,
+        "desalineacion_grados": 80.52709809238634,
+        "correcto": {
+          "z": -1.2583721062997018,
+          "p": 1.0
+        },
+        "agua": {
+          "z": -1.3138409546577798,
+          "p": 1.0
+        },
+        "recorte": {
+          "z": -1.4213981245731033,
+          "p": 0.95,
+          "cobertura": 0.39444444444444443
+        }
+      },
+      "S1": {
+        "densidad": 0.8225806451612904,
+        "desalineacion_grados": 84.95580513094716,
+        "correcto": {
+          "z": 3.4046411868435524,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 2.663224194221377,
+          "p": 0.025
+        },
+        "recorte": {
+          "z": 1.6700071962151462,
+          "p": 0.06,
+          "cobertura": 0.49444444444444446
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6231155778894473,
+        "agua_fraccion_celdas": 0.2077575376884422,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 14,
+      "theta_grados": 149.57699740004006,
+      "S0": {
+        "densidad": 0.28024193548387094,
+        "desalineacion_grados": 70.06991553063749,
+        "correcto": {
+          "z": 0.3225182620918633,
+          "p": 0.33
+        },
+        "agua": {
+          "z": -0.309016433095104,
+          "p": 0.48
+        },
+        "recorte": {
+          "z": 1.2197567040342228,
+          "p": 0.145,
+          "cobertura": 0.25
+        }
+      },
+      "S1": {
+        "densidad": 0.46774193548387094,
+        "desalineacion_grados": 84.65320948527084,
+        "correcto": {
+          "z": 2.4519672369524126,
+          "p": 0.045
+        },
+        "agua": {
+          "z": 0.7345907069215185,
+          "p": 0.205
+        },
+        "recorte": {
+          "z": 1.3539090653898767,
+          "p": 0.135,
+          "cobertura": 0.37222222222222223
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7386934673366834,
+        "agua_fraccion_celdas": 0.23728015075376885,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 15,
+      "theta_grados": 124.69380623372743,
+      "S0": {
+        "densidad": 0.46169354838709675,
+        "desalineacion_grados": 72.94568170809333,
+        "correcto": {
+          "z": 1.0680585121536559,
+          "p": 0.14
+        },
+        "agua": {
+          "z": 0.6621521454237028,
+          "p": 0.205
+        },
+        "recorte": {
+          "z": 0.8168085067336144,
+          "p": 0.16,
+          "cobertura": 0.31666666666666665
+        }
+      },
+      "S1": {
+        "densidad": 0.7298387096774194,
+        "desalineacion_grados": 81.35686019816548,
+        "correcto": {
+          "z": 3.0895333863792582,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 2.318909645227933,
+          "p": 0.035
+        },
+        "recorte": {
+          "z": 1.8329127395938112,
+          "p": 0.06,
+          "cobertura": 0.49444444444444446
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7085427135678392,
+        "agua_fraccion_celdas": 0.22518844221105527,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 16,
+      "theta_grados": 102.04503099828571,
+      "S0": {
+        "densidad": 0.3629032258064516,
+        "desalineacion_grados": 65.39471184850689,
+        "correcto": {
+          "z": 1.351883449351557,
+          "p": 0.095
+        },
+        "agua": {
+          "z": 0.4327026305546355,
+          "p": 0.23
+        },
+        "recorte": {
+          "z": 0.5301811713140644,
+          "p": 0.28,
+          "cobertura": 0.3
+        }
+      },
+      "S1": {
+        "densidad": 0.5201612903225806,
+        "desalineacion_grados": 79.10345184571392,
+        "correcto": {
+          "z": 3.1417107182729893,
+          "p": 0.03
+        },
+        "agua": {
+          "z": 1.4698258905097072,
+          "p": 0.075
+        },
+        "recorte": {
+          "z": 1.3944448995156673,
+          "p": 0.11,
+          "cobertura": 0.17222222222222222
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6683417085427136,
+        "agua_fraccion_celdas": 0.19205402010050251,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 17,
+      "theta_grados": 152.11346270362228,
+      "S0": {
+        "densidad": 0.3024193548387097,
+        "desalineacion_grados": 70.2671339235803,
+        "correcto": {
+          "z": 0.4882850222191972,
+          "p": 0.24
+        },
+        "agua": {
+          "z": -0.07453428460494488,
+          "p": 0.36
+        },
+        "recorte": {
+          "z": -0.3204181239531239,
+          "p": 0.48,
+          "cobertura": 0.46111111111111114
+        }
+      },
+      "S1": {
+        "densidad": 0.6794354838709677,
+        "desalineacion_grados": 87.05179631298358,
+        "correcto": {
+          "z": 4.075757980134891,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 1.9861227235702574,
+          "p": 0.06
+        },
+        "recorte": {
+          "z": 2.6110998688605958,
+          "p": 0.01,
+          "cobertura": 0.5555555555555556
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6984924623115578,
+        "agua_fraccion_celdas": 0.21199748743718594,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 18,
+      "theta_grados": 71.8750384591631,
+      "S0": {
+        "densidad": 0.2399193548387097,
+        "desalineacion_grados": 17.39684477931096,
+        "correcto": {
+          "z": -0.32503323337212875,
+          "p": 0.575
+        },
+        "agua": {
+          "z": -0.7958376930157314,
+          "p": 0.855
+        },
+        "recorte": {
+          "z": -0.09193787540306425,
+          "p": 0.52,
+          "cobertura": 0.5111111111111111
+        }
+      },
+      "S1": {
+        "densidad": 0.5080645161290323,
+        "desalineacion_grados": 73.54163668794956,
+        "correcto": {
+          "z": 2.6220906404408697,
+          "p": 0.035
+        },
+        "agua": {
+          "z": 0.8923434579858999,
+          "p": 0.165
+        },
+        "recorte": {
+          "z": 0.4564758115045811,
+          "p": 0.37,
+          "cobertura": 0.16666666666666666
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7889447236180904,
+        "agua_fraccion_celdas": 0.2735552763819096,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 19,
+      "theta_grados": 75.66818323126695,
+      "S0": {
+        "densidad": 0.3790322580645161,
+        "desalineacion_grados": 77.07005922667024,
+        "correcto": {
+          "z": 1.1625127567667253,
+          "p": 0.1
+        },
+        "agua": {
+          "z": 0.2685283970250748,
+          "p": 0.255
+        },
+        "recorte": {
+          "z": 0.20232999512819352,
+          "p": 0.43,
+          "cobertura": 0.17777777777777778
+        }
+      },
+      "S1": {
+        "densidad": 0.4737903225806452,
+        "desalineacion_grados": 80.38796537160853,
+        "correcto": {
+          "z": 2.1398594366803603,
+          "p": 0.05
+        },
+        "agua": {
+          "z": 0.8646703617474882,
+          "p": 0.15
+        },
+        "recorte": {
+          "z": 1.6588467114112864,
+          "p": 0.075,
+          "cobertura": 0.20555555555555555
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.5979899497487438,
+        "agua_fraccion_celdas": 0.208071608040201,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 20,
+      "theta_grados": 50.41367327342868,
+      "S0": {
+        "densidad": 0.3286290322580645,
+        "desalineacion_grados": 58.69391217591552,
+        "correcto": {
+          "z": 0.9458431765416927,
+          "p": 0.15
+        },
+        "agua": {
+          "z": -0.07300573643285417,
+          "p": 0.365
+        },
+        "recorte": {
+          "z": 1.2070261885803388,
+          "p": 0.155,
+          "cobertura": 0.2388888888888889
+        }
+      },
+      "S1": {
+        "densidad": 0.41935483870967744,
+        "desalineacion_grados": 64.78754694400594,
+        "correcto": {
+          "z": 2.0963492409169797,
+          "p": 0.06
+        },
+        "agua": {
+          "z": 0.471799571697318,
+          "p": 0.23
+        },
+        "recorte": {
+          "z": 2.641440319068262,
+          "p": 0.015,
+          "cobertura": 0.4
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7889447236180904,
+        "agua_fraccion_celdas": 0.26900125628140703,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 21,
+      "theta_grados": 140.60116598714478,
+      "S0": {
+        "densidad": 0.21975806451612903,
+        "desalineacion_grados": 24.914102001959364,
+        "correcto": {
+          "z": -0.8080922920677397,
+          "p": 0.8
+        },
+        "agua": {
+          "z": -0.8185941428757112,
+          "p": 0.82
+        },
+        "recorte": {
+          "z": -0.42934266694323997,
+          "p": 0.63,
+          "cobertura": 0.39444444444444443
+        }
+      },
+      "S1": {
+        "densidad": 0.5020161290322581,
+        "desalineacion_grados": 89.64592529737692,
+        "correcto": {
+          "z": 1.3106213590716567,
+          "p": 0.12
+        },
+        "agua": {
+          "z": 0.8358152021019686,
+          "p": 0.18
+        },
+        "recorte": {
+          "z": -0.049317130099808246,
+          "p": 0.515,
+          "cobertura": 0.4888888888888889
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6683417085427136,
+        "agua_fraccion_celdas": 0.23869346733668342,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 22,
+      "theta_grados": 65.9424447777737,
+      "S0": {
+        "densidad": 0.2217741935483871,
+        "desalineacion_grados": 8.441320225132179,
+        "correcto": {
+          "z": -0.34448949941498946,
+          "p": 0.505
+        },
+        "agua": {
+          "z": -0.590663190357905,
+          "p": 0.705
+        },
+        "recorte": {
+          "z": 0.16909475035259366,
+          "p": 0.32,
+          "cobertura": 0.34444444444444444
+        }
+      },
+      "S1": {
+        "densidad": 0.5645161290322581,
+        "desalineacion_grados": 78.99434942140934,
+        "correcto": {
+          "z": 3.642537447286718,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 1.1684824853008613,
+          "p": 0.13
+        },
+        "recorte": {
+          "z": 2.4645358931819783,
+          "p": 0.055,
+          "cobertura": 0.3277777777777778
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6381909547738693,
+        "agua_fraccion_celdas": 0.23037060301507536,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 23,
+      "theta_grados": 124.90795451832557,
+      "S0": {
+        "densidad": 0.1532258064516129,
+        "desalineacion_grados": 12.355399791961775,
+        "correcto": {
+          "z": -1.07212073188555,
+          "p": 0.95
+        },
+        "agua": {
+          "z": -1.1174496008897317,
+          "p": 0.995
+        },
+        "recorte": {
+          "z": -1.4960573948188867,
+          "p": 0.985,
+          "cobertura": 0.3333333333333333
+        }
+      },
+      "S1": {
+        "densidad": 0.7923387096774194,
+        "desalineacion_grados": 87.8985951808722,
+        "correcto": {
+          "z": 3.7092572907044943,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 2.593831496979435,
+          "p": 0.045
+        },
+        "recorte": {
+          "z": 2.038915154067618,
+          "p": 0.01,
+          "cobertura": 0.5
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7437185929648241,
+        "agua_fraccion_celdas": 0.2748115577889447,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 24,
+      "theta_grados": 59.44839060047676,
+      "S0": {
+        "densidad": 0.1814516129032258,
+        "desalineacion_grados": 20.10380060728441,
+        "correcto": {
+          "z": -0.6085679563882312,
+          "p": 0.775
+        },
+        "agua": {
+          "z": -1.0247326008768465,
+          "p": 0.955
+        },
+        "recorte": {
+          "z": -0.7186170210452304,
+          "p": 0.73,
+          "cobertura": 0.2722222222222222
+        }
+      },
+      "S1": {
+        "densidad": 0.4012096774193548,
+        "desalineacion_grados": 66.96285612783261,
+        "correcto": {
+          "z": 3.0797381464385682,
+          "p": 0.02
+        },
+        "agua": {
+          "z": 0.3275503489083756,
+          "p": 0.33
+        },
+        "recorte": {
+          "z": 1.79259655340822,
+          "p": 0.075,
+          "cobertura": 0.24444444444444444
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7587939698492462,
+        "agua_fraccion_celdas": 0.28015075376884424,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 25,
+      "theta_grados": 28.929821981761403,
+      "S0": {
+        "densidad": 0.1875,
+        "desalineacion_grados": 37.57243084532844,
+        "correcto": {
+          "z": -0.10386493013188722,
+          "p": 0.385
+        },
+        "agua": {
+          "z": -0.5225677417446142,
+          "p": 0.59
+        },
+        "recorte": {
+          "z": -0.37600809290085396,
+          "p": 0.56,
+          "cobertura": 0.40555555555555556
+        }
+      },
+      "S1": {
+        "densidad": 0.26411290322580644,
+        "desalineacion_grados": 73.13577262061168,
+        "correcto": {
+          "z": 0.9961723270912609,
+          "p": 0.145
+        },
+        "agua": {
+          "z": -0.04982491807279047,
+          "p": 0.365
+        },
+        "recorte": {
+          "z": 1.32737763430326,
+          "p": 0.135,
+          "cobertura": 0.4
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7638190954773869,
+        "agua_fraccion_celdas": 0.26853015075376885,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 26,
+      "theta_grados": 88.48780516888282,
+      "S0": {
+        "densidad": 0.21975806451612903,
+        "desalineacion_grados": 26.479820265821175,
+        "correcto": {
+          "z": -0.17195150452735444,
+          "p": 0.4
+        },
+        "agua": {
+          "z": -0.6301496468609709,
+          "p": 0.665
+        },
+        "recorte": {
+          "z": 2.0986292343239925,
+          "p": 0.05,
+          "cobertura": 0.4166666666666667
+        }
+      },
+      "S1": {
+        "densidad": 0.6693548387096774,
+        "desalineacion_grados": 78.73623411216373,
+        "correcto": {
+          "z": 4.472413630232476,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 1.6674553879553387,
+          "p": 0.1
+        },
+        "recorte": {
+          "z": 2.596081427534812,
+          "p": 0.01,
+          "cobertura": 0.2777777777777778
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7035175879396985,
+        "agua_fraccion_celdas": 0.26711683417085424,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 27,
+      "theta_grados": 125.59251896582137,
+      "S0": {
+        "densidad": 0.2217741935483871,
+        "desalineacion_grados": 54.137944951015726,
+        "correcto": {
+          "z": -0.34350149758989496,
+          "p": 0.57
+        },
+        "agua": {
+          "z": -0.39599405182559483,
+          "p": 0.585
+        },
+        "recorte": {
+          "z": -0.29964638124479287,
+          "p": 0.545,
+          "cobertura": 0.1388888888888889
+        }
+      },
+      "S1": {
+        "densidad": 0.5544354838709677,
+        "desalineacion_grados": 79.15466645569154,
+        "correcto": {
+          "z": 3.196633993108218,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 2.159019642749648,
+          "p": 0.04
+        },
+        "recorte": {
+          "z": 1.1931741418760538,
+          "p": 0.175,
+          "cobertura": 0.4388888888888889
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6984924623115578,
+        "agua_fraccion_celdas": 0.2021042713567839,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 28,
+      "theta_grados": 153.3301084767884,
+      "S0": {
+        "densidad": 0.2762096774193548,
+        "desalineacion_grados": 30.977434371978454,
+        "correcto": {
+          "z": -0.5027106175768223,
+          "p": 0.695
+        },
+        "agua": {
+          "z": -0.6437424342265514,
+          "p": 0.725
+        },
+        "recorte": {
+          "z": 0.13031015883796337,
+          "p": 0.46,
+          "cobertura": 0.21666666666666667
+        }
+      },
+      "S1": {
+        "densidad": 0.6149193548387096,
+        "desalineacion_grados": 69.8388609602299,
+        "correcto": {
+          "z": 1.8241094525918478,
+          "p": 0.095
+        },
+        "agua": {
+          "z": 1.146739850387596,
+          "p": 0.125
+        },
+        "recorte": {
+          "z": 1.6508692552318451,
+          "p": 0.11,
+          "cobertura": 0.43333333333333335
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.628140703517588,
+        "agua_fraccion_celdas": 0.21215452261306533,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 29,
+      "theta_grados": 9.008454663732405,
+      "S0": {
+        "densidad": 0.18346774193548387,
+        "desalineacion_grados": 8.202680375099288,
+        "correcto": {
+          "z": -1.0259706753692346,
+          "p": 0.945
+        },
+        "agua": {
+          "z": -1.0350401690679072,
+          "p": 0.975
+        },
+        "recorte": {
+          "z": -1.4829101052776017,
+          "p": 0.99,
+          "cobertura": 0.12222222222222222
+        }
+      },
+      "S1": {
+        "densidad": 0.7016129032258065,
+        "desalineacion_grados": 76.50667052778377,
+        "correcto": {
+          "z": 3.847818870461042,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 2.024612993560843,
+          "p": 0.06
+        },
+        "recorte": {
+          "z": 1.5320288549287897,
+          "p": 0.07,
+          "cobertura": 0.15
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6934673366834171,
+        "agua_fraccion_celdas": 0.23555276381909548,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 30,
+      "theta_grados": 42.4437848662559,
+      "S0": {
+        "densidad": 0.20766129032258066,
+        "desalineacion_grados": 50.54386908396282,
+        "correcto": {
+          "z": -0.15446000028174492,
+          "p": 0.445
+        },
+        "agua": {
+          "z": -0.509154385227277,
+          "p": 0.655
+        },
+        "recorte": {
+          "z": -0.18868430564082245,
+          "p": 0.54,
+          "cobertura": 0.25
+        }
+      },
+      "S1": {
+        "densidad": 0.46774193548387094,
+        "desalineacion_grados": 77.68247596479932,
+        "correcto": {
+          "z": 3.1664300057757733,
+          "p": 0.02
+        },
+        "agua": {
+          "z": 1.2604776514866982,
+          "p": 0.09
+        },
+        "recorte": {
+          "z": 3.149174646931135,
+          "p": 0.025,
+          "cobertura": 0.5055555555555555
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7286432160804021,
+        "agua_fraccion_celdas": 0.21717964824120603,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 31,
+      "theta_grados": 162.5709259646749,
+      "S0": {
+        "densidad": 0.28225806451612906,
+        "desalineacion_grados": 68.8464002806344,
+        "correcto": {
+          "z": 0.40009661302135474,
+          "p": 0.24
+        },
+        "agua": {
+          "z": 0.11524549410976052,
+          "p": 0.305
+        },
+        "recorte": {
+          "z": 0.3684448293470207,
+          "p": 0.3,
+          "cobertura": 0.19444444444444445
+        }
+      },
+      "S1": {
+        "densidad": 0.6290322580645161,
+        "desalineacion_grados": 88.18434348768356,
+        "correcto": {
+          "z": 3.6102482469864094,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 2.521970797580706,
+          "p": 0.03
+        },
+        "recorte": {
+          "z": 2.464442430071883,
+          "p": 0.015,
+          "cobertura": 0.29444444444444445
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7236180904522613,
+        "agua_fraccion_celdas": 0.24937185929648242,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 32,
+      "theta_grados": 28.84370946745825,
+      "S0": {
+        "densidad": 0.1532258064516129,
+        "desalineacion_grados": 19.682605506834104,
+        "correcto": {
+          "z": -1.1282009528708663,
+          "p": 0.96
+        },
+        "agua": {
+          "z": -0.8554651468127709,
+          "p": 0.97
+        },
+        "recorte": {
+          "z": -1.5536120210943865,
+          "p": 0.995,
+          "cobertura": 0.25
+        }
+      },
+      "S1": {
+        "densidad": 0.5080645161290323,
+        "desalineacion_grados": 78.99332525116353,
+        "correcto": {
+          "z": 3.9520394911184917,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 1.7075640492497164,
+          "p": 0.05
+        },
+        "recorte": {
+          "z": 2.4435844627275394,
+          "p": 0.04,
+          "cobertura": 0.3277777777777778
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7286432160804021,
+        "agua_fraccion_celdas": 0.2077575376884422,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 33,
+      "theta_grados": 79.85560265328009,
+      "S0": {
+        "densidad": 0.2056451612903226,
+        "desalineacion_grados": 18.68924321085419,
+        "correcto": {
+          "z": -0.6034148800108234,
+          "p": 0.765
+        },
+        "agua": {
+          "z": -0.8435419625800246,
+          "p": 0.89
+        },
+        "recorte": {
+          "z": 0.18803893721440174,
+          "p": 0.475,
+          "cobertura": 0.24444444444444444
+        }
+      },
+      "S1": {
+        "densidad": 0.5705645161290323,
+        "desalineacion_grados": 74.80443358040203,
+        "correcto": {
+          "z": 2.4939772481222584,
+          "p": 0.045
+        },
+        "agua": {
+          "z": 1.988629732998825,
+          "p": 0.08
+        },
+        "recorte": {
+          "z": 0.812994717461399,
+          "p": 0.235,
+          "cobertura": 0.17222222222222222
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.678391959798995,
+        "agua_fraccion_celdas": 0.22157663316582915,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 34,
+      "theta_grados": 0.7250838287478367,
+      "S0": {
+        "densidad": 0.2540322580645161,
+        "desalineacion_grados": 21.250344449085073,
+        "correcto": {
+          "z": -0.13251161707269718,
+          "p": 0.445
+        },
+        "agua": {
+          "z": -0.4257705282220083,
+          "p": 0.59
+        },
+        "recorte": {
+          "z": 0.8114631033247295,
+          "p": 0.265,
+          "cobertura": 0.4
+        }
+      },
+      "S1": {
+        "densidad": 0.6028225806451613,
+        "desalineacion_grados": 81.8122653709588,
+        "correcto": {
+          "z": 3.4343198457590085,
+          "p": 0.025
+        },
+        "agua": {
+          "z": 1.876774551121235,
+          "p": 0.065
+        },
+        "recorte": {
+          "z": 1.6052409145806057,
+          "p": 0.075,
+          "cobertura": 0.24444444444444444
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6130653266331658,
+        "agua_fraccion_celdas": 0.18498743718592964,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 35,
+      "theta_grados": 60.83092059907042,
+      "S0": {
+        "densidad": 0.2157258064516129,
+        "desalineacion_grados": 70.62630063418398,
+        "correcto": {
+          "z": -0.25072056593310516,
+          "p": 0.51
+        },
+        "agua": {
+          "z": -0.7107774733416293,
+          "p": 0.745
+        },
+        "recorte": {
+          "z": -0.7888405356629337,
+          "p": 0.84,
+          "cobertura": 0.25555555555555554
+        }
+      },
+      "S1": {
+        "densidad": 0.4012096774193548,
+        "desalineacion_grados": 67.22429032061345,
+        "correcto": {
+          "z": 2.595027804248717,
+          "p": 0.03
+        },
+        "agua": {
+          "z": 0.4476765444575832,
+          "p": 0.235
+        },
+        "recorte": {
+          "z": 2.149785966686025,
+          "p": 0.035,
+          "cobertura": 0.2111111111111111
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6432160804020101,
+        "agua_fraccion_celdas": 0.2079145728643216,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 36,
+      "theta_grados": 32.5139564203505,
+      "S0": {
+        "densidad": 0.21169354838709678,
+        "desalineacion_grados": 21.17610624873574,
+        "correcto": {
+          "z": -0.33956871751528983,
+          "p": 0.605
+        },
+        "agua": {
+          "z": -0.6290074162029234,
+          "p": 0.745
+        },
+        "recorte": {
+          "z": -0.2549964128756008,
+          "p": 0.595,
+          "cobertura": 0.2833333333333333
+        }
+      },
+      "S1": {
+        "densidad": 0.5907258064516129,
+        "desalineacion_grados": 78.27347868861551,
+        "correcto": {
+          "z": 4.032057180517067,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 2.2223709256102073,
+          "p": 0.05
+        },
+        "recorte": {
+          "z": 3.129342584038559,
+          "p": 0.015,
+          "cobertura": 0.3888888888888889
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6834170854271356,
+        "agua_fraccion_celdas": 0.1972361809045226,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 37,
+      "theta_grados": 126.74754569044251,
+      "S0": {
+        "densidad": 0.4334677419354839,
+        "desalineacion_grados": 82.74788832578282,
+        "correcto": {
+          "z": 1.2516606441657105,
+          "p": 0.125
+        },
+        "agua": {
+          "z": 0.22004515502540647,
+          "p": 0.315
+        },
+        "recorte": {
+          "z": 1.2666642175795182,
+          "p": 0.105,
+          "cobertura": 0.3888888888888889
+        }
+      },
+      "S1": {
+        "densidad": 0.6693548387096774,
+        "desalineacion_grados": 78.94147669131965,
+        "correcto": {
+          "z": 3.1982517054248274,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 1.3421019540741455,
+          "p": 0.14
+        },
+        "recorte": {
+          "z": 2.443502601199693,
+          "p": 0.04,
+          "cobertura": 0.4166666666666667
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.5527638190954773,
+        "agua_fraccion_celdas": 0.22157663316582915,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 38,
+      "theta_grados": 87.43698807081614,
+      "S0": {
+        "densidad": 0.4415322580645161,
+        "desalineacion_grados": 84.67870958699193,
+        "correcto": {
+          "z": 1.7898055951932077,
+          "p": 0.09
+        },
+        "agua": {
+          "z": 0.8132844250721147,
+          "p": 0.15
+        },
+        "recorte": {
+          "z": 0.7298828943859281,
+          "p": 0.27,
+          "cobertura": 0.18333333333333332
+        }
+      },
+      "S1": {
+        "densidad": 0.6068548387096774,
+        "desalineacion_grados": 79.37994872945502,
+        "correcto": {
+          "z": 3.3779539204984146,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 1.9170082481199164,
+          "p": 0.065
+        },
+        "recorte": {
+          "z": 1.824082912499638,
+          "p": 0.055,
+          "cobertura": 0.29444444444444445
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.8040201005025126,
+        "agua_fraccion_celdas": 0.23209798994974876,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 39,
+      "theta_grados": 90.30815228725346,
+      "S0": {
+        "densidad": 0.19153225806451613,
+        "desalineacion_grados": 15.368055299401469,
+        "correcto": {
+          "z": -0.5883330359239652,
+          "p": 0.755
+        },
+        "agua": {
+          "z": -0.7952476880347146,
+          "p": 0.935
+        },
+        "recorte": {
+          "z": -0.3897344522095763,
+          "p": 0.705,
+          "cobertura": 0.3388888888888889
+        }
+      },
+      "S1": {
+        "densidad": 0.5685483870967742,
+        "desalineacion_grados": 79.58273769470023,
+        "correcto": {
+          "z": 2.7608542465968413,
+          "p": 0.05
+        },
+        "agua": {
+          "z": 1.661260340091445,
+          "p": 0.08
+        },
+        "recorte": {
+          "z": 0.9832024077793917,
+          "p": 0.18,
+          "cobertura": 0.20555555555555555
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7889447236180904,
+        "agua_fraccion_celdas": 0.23131281407035176,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 40,
+      "theta_grados": 131.38172914764917,
+      "S0": {
+        "densidad": 0.30443548387096775,
+        "desalineacion_grados": 62.796243479669876,
+        "correcto": {
+          "z": -0.15375917590225674,
+          "p": 0.44
+        },
+        "agua": {
+          "z": -0.34630332145114706,
+          "p": 0.53
+        },
+        "recorte": {
+          "z": -0.0067386304064607746,
+          "p": 0.385,
+          "cobertura": 0.3888888888888889
+        }
+      },
+      "S1": {
+        "densidad": 0.6008064516129032,
+        "desalineacion_grados": 83.74573323514187,
+        "correcto": {
+          "z": 2.2048759434835445,
+          "p": 0.04
+        },
+        "agua": {
+          "z": 1.5279632950910178,
+          "p": 0.11
+        },
+        "recorte": {
+          "z": 1.9654334959004753,
+          "p": 0.075,
+          "cobertura": 0.5555555555555556
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6984924623115578,
+        "agua_fraccion_celdas": 0.20744346733668342,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 41,
+      "theta_grados": 171.74719853316083,
+      "S0": {
+        "densidad": 0.2842741935483871,
+        "desalineacion_grados": 57.09982439869719,
+        "correcto": {
+          "z": -0.01800467981240158,
+          "p": 0.385
+        },
+        "agua": {
+          "z": -0.45484743690049023,
+          "p": 0.56
+        },
+        "recorte": {
+          "z": -0.6662850432732977,
+          "p": 0.77,
+          "cobertura": 0.4166666666666667
+        }
+      },
+      "S1": {
+        "densidad": 0.44556451612903225,
+        "desalineacion_grados": 73.58790842358152,
+        "correcto": {
+          "z": 1.3600458135214428,
+          "p": 0.085
+        },
+        "agua": {
+          "z": 0.5158189431874205,
+          "p": 0.265
+        },
+        "recorte": {
+          "z": 0.17982385941584325,
+          "p": 0.415,
+          "cobertura": 0.19444444444444445
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.678391959798995,
+        "agua_fraccion_celdas": 0.24246231155778894,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 42,
+      "theta_grados": 139.3120887400734,
+      "S0": {
+        "densidad": 0.23790322580645162,
+        "desalineacion_grados": 87.47069165962704,
+        "correcto": {
+          "z": -0.5142662890733621,
+          "p": 0.62
+        },
+        "agua": {
+          "z": -0.5163955988909985,
+          "p": 0.63
+        },
+        "recorte": {
+          "z": -0.7494523948647486,
+          "p": 0.735,
+          "cobertura": 0.38333333333333336
+        }
+      },
+      "S1": {
+        "densidad": 0.5262096774193549,
+        "desalineacion_grados": 78.22384023750061,
+        "correcto": {
+          "z": 1.6570209198525516,
+          "p": 0.1
+        },
+        "agua": {
+          "z": 1.327171024825116,
+          "p": 0.105
+        },
+        "recorte": {
+          "z": 0.9719355251257622,
+          "p": 0.185,
+          "cobertura": 0.6277777777777778
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6683417085427136,
+        "agua_fraccion_celdas": 0.21262562814070352,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 43,
+      "theta_grados": 117.41386728616392,
+      "S0": {
+        "densidad": 0.4495967741935484,
+        "desalineacion_grados": 83.2685365094183,
+        "correcto": {
+          "z": 1.810156869099803,
+          "p": 0.06
+        },
+        "agua": {
+          "z": 0.8692883683433784,
+          "p": 0.18
+        },
+        "recorte": {
+          "z": 0.8668290330400523,
+          "p": 0.23,
+          "cobertura": 0.3888888888888889
+        }
+      },
+      "S1": {
+        "densidad": 0.4536290322580645,
+        "desalineacion_grados": 89.88513481970183,
+        "correcto": {
+          "z": 1.8449138371575855,
+          "p": 0.06
+        },
+        "agua": {
+          "z": 0.8921432217322451,
+          "p": 0.17
+        },
+        "recorte": {
+          "z": 1.6853920574625347,
+          "p": 0.065,
+          "cobertura": 0.4777777777777778
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6381909547738693,
+        "agua_fraccion_celdas": 0.2540829145728643,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 44,
+      "theta_grados": 22.061791741296886,
+      "S0": {
+        "densidad": 0.21774193548387097,
+        "desalineacion_grados": 77.98431790360641,
+        "correcto": {
+          "z": 0.36023715909331666,
+          "p": 0.27
+        },
+        "agua": {
+          "z": -0.38042743532447876,
+          "p": 0.545
+        },
+        "recorte": {
+          "z": 0.2863866576318912,
+          "p": 0.415,
+          "cobertura": 0.25555555555555554
+        }
+      },
+      "S1": {
+        "densidad": 0.5362903225806451,
+        "desalineacion_grados": 82.20279011416274,
+        "correcto": {
+          "z": 5.115307165899387,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 1.9189573054429672,
+          "p": 0.055
+        },
+        "recorte": {
+          "z": 2.6420709373680147,
+          "p": 0.035,
+          "cobertura": 0.3055555555555556
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7286432160804021,
+        "agua_fraccion_celdas": 0.24104899497487436,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 45,
+      "theta_grados": 103.16351825055102,
+      "S0": {
+        "densidad": 0.19959677419354838,
+        "desalineacion_grados": 5.492603496696095,
+        "correcto": {
+          "z": -0.6696290472214195,
+          "p": 0.82
+        },
+        "agua": {
+          "z": -0.7615702457101344,
+          "p": 0.88
+        },
+        "recorte": {
+          "z": -0.26619577018803686,
+          "p": 0.57,
+          "cobertura": 0.3333333333333333
+        }
+      },
+      "S1": {
+        "densidad": 0.6491935483870968,
+        "desalineacion_grados": 77.46105832352555,
+        "correcto": {
+          "z": 4.1364728820273164,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 2.112989828618235,
+          "p": 0.055
+        },
+        "recorte": {
+          "z": 1.0648207821142885,
+          "p": 0.17,
+          "cobertura": 0.16666666666666666
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7085427135678392,
+        "agua_fraccion_celdas": 0.22173366834170855,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 46,
+      "theta_grados": 163.0087698042562,
+      "S0": {
+        "densidad": 0.08669354838709678,
+        "desalineacion_grados": 86.86005537365487,
+        "correcto": {
+          "z": -1.5379391044993245,
+          "p": 1.0
+        },
+        "agua": {
+          "z": -1.446304838450442,
+          "p": 1.0
+        },
+        "recorte": {
+          "z": -1.7369124600559938,
+          "p": 0.98,
+          "cobertura": 0.26666666666666666
+        }
+      },
+      "S1": {
+        "densidad": 0.594758064516129,
+        "desalineacion_grados": 79.26304484372994,
+        "correcto": {
+          "z": 3.310833070304658,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 1.9543560317020698,
+          "p": 0.07
+        },
+        "recorte": {
+          "z": 1.1185019013223396,
+          "p": 0.195,
+          "cobertura": 0.21666666666666667
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.678391959798995,
+        "agua_fraccion_celdas": 0.24136306532663315,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 47,
+      "theta_grados": 133.52435903566092,
+      "S0": {
+        "densidad": 0.24193548387096775,
+        "desalineacion_grados": 43.40622581073578,
+        "correcto": {
+          "z": -0.38686986159074227,
+          "p": 0.61
+        },
+        "agua": {
+          "z": -0.6276556189156057,
+          "p": 0.78
+        },
+        "recorte": {
+          "z": -0.7410030753942607,
+          "p": 0.78,
+          "cobertura": 0.18333333333333332
+        }
+      },
+      "S1": {
+        "densidad": 0.6673387096774194,
+        "desalineacion_grados": 75.20699054839514,
+        "correcto": {
+          "z": 3.4624852612371444,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 2.0057008741546767,
+          "p": 0.055
+        },
+        "recorte": {
+          "z": 2.1162076013680275,
+          "p": 0.02,
+          "cobertura": 0.5222222222222223
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7135678391959799,
+        "agua_fraccion_celdas": 0.22047738693467336,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 48,
+      "theta_grados": 69.78597701140701,
+      "S0": {
+        "densidad": 0.2318548387096774,
+        "desalineacion_grados": 37.07717865873049,
+        "correcto": {
+          "z": -0.331469476547283,
+          "p": 0.555
+        },
+        "agua": {
+          "z": -0.4780648814807238,
+          "p": 0.69
+        },
+        "recorte": {
+          "z": 0.05857268181875404,
+          "p": 0.365,
+          "cobertura": 0.37222222222222223
+        }
+      },
+      "S1": {
+        "densidad": 0.39314516129032256,
+        "desalineacion_grados": 68.21286207023368,
+        "correcto": {
+          "z": 1.381840285346467,
+          "p": 0.105
+        },
+        "agua": {
+          "z": 0.5596761756740515,
+          "p": 0.18
+        },
+        "recorte": {
+          "z": 1.9516482926391399,
+          "p": 0.04,
+          "cobertura": 0.5444444444444444
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.5376884422110553,
+        "agua_fraccion_celdas": 0.16504396984924624,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 49,
+      "theta_grados": 65.31375460970453,
+      "S0": {
+        "densidad": 0.15725806451612903,
+        "desalineacion_grados": 84.44424987275009,
+        "correcto": {
+          "z": -1.1789345500668102,
+          "p": 0.935
+        },
+        "agua": {
+          "z": -1.0740255466181943,
+          "p": 0.97
+        },
+        "recorte": {
+          "z": -1.1686227167114487,
+          "p": 0.88,
+          "cobertura": 0.37222222222222223
+        }
+      },
+      "S1": {
+        "densidad": 0.5584677419354839,
+        "desalineacion_grados": 80.91670287663612,
+        "correcto": {
+          "z": 3.963370452377926,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 1.4083186620678745,
+          "p": 0.095
+        },
+        "recorte": {
+          "z": 2.627234773410745,
+          "p": 0.035,
+          "cobertura": 0.5666666666666667
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7135678391959799,
+        "agua_fraccion_celdas": 0.22173366834170855,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 50,
+      "theta_grados": 141.73608453959224,
+      "S0": {
+        "densidad": 0.2217741935483871,
+        "desalineacion_grados": 14.556599353058768,
+        "correcto": {
+          "z": -0.8164370044926408,
+          "p": 0.785
+        },
+        "agua": {
+          "z": -0.8152449414237287,
+          "p": 0.845
+        },
+        "recorte": {
+          "z": -0.741695430764101,
+          "p": 0.675,
+          "cobertura": 0.4166666666666667
+        }
+      },
+      "S1": {
+        "densidad": 0.6471774193548387,
+        "desalineacion_grados": 74.2094586832775,
+        "correcto": {
+          "z": 3.636267682043466,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 1.7086302960193827,
+          "p": 0.06
+        },
+        "recorte": {
+          "z": 1.6072043697549567,
+          "p": 0.09,
+          "cobertura": 0.40555555555555556
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.8140703517587939,
+        "agua_fraccion_celdas": 0.28988693467336685,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 51,
+      "theta_grados": 169.63941532867503,
+      "S0": {
+        "densidad": 0.29435483870967744,
+        "desalineacion_grados": 65.5955154859388,
+        "correcto": {
+          "z": 0.5608824885497609,
+          "p": 0.19
+        },
+        "agua": {
+          "z": 0.0762236916605581,
+          "p": 0.3
+        },
+        "recorte": {
+          "z": 0.025231087962934565,
+          "p": 0.455,
+          "cobertura": 0.3
+        }
+      },
+      "S1": {
+        "densidad": 0.5745967741935484,
+        "desalineacion_grados": 83.0756400499779,
+        "correcto": {
+          "z": 3.40237892001037,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 2.0123334575216223,
+          "p": 0.045
+        },
+        "recorte": {
+          "z": 1.8603178125516804,
+          "p": 0.07,
+          "cobertura": 0.3388888888888889
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.8391959798994975,
+        "agua_fraccion_celdas": 0.25753768844221103,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 52,
+      "theta_grados": 110.8373318644379,
+      "S0": {
+        "densidad": 0.5,
+        "desalineacion_grados": 84.82418054265693,
+        "correcto": {
+          "z": 2.5861459209089515,
+          "p": 0.03
+        },
+        "agua": {
+          "z": 1.3771348402737518,
+          "p": 0.1
+        },
+        "recorte": {
+          "z": 0.9721765408823557,
+          "p": 0.215,
+          "cobertura": 0.35
+        }
+      },
+      "S1": {
+        "densidad": 0.5141129032258065,
+        "desalineacion_grados": 82.2361052625716,
+        "correcto": {
+          "z": 2.739626717936311,
+          "p": 0.025
+        },
+        "agua": {
+          "z": 1.4779944003421714,
+          "p": 0.09
+        },
+        "recorte": {
+          "z": 1.8507021942017885,
+          "p": 0.04,
+          "cobertura": 0.4722222222222222
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7487437185929648,
+        "agua_fraccion_celdas": 0.2451319095477387,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 53,
+      "theta_grados": 2.0028590215679243,
+      "S0": {
+        "densidad": 0.3064516129032258,
+        "desalineacion_grados": 51.93287244508171,
+        "correcto": {
+          "z": 0.3484528932827604,
+          "p": 0.265
+        },
+        "agua": {
+          "z": -0.01568133305353559,
+          "p": 0.375
+        },
+        "recorte": {
+          "z": 0.274479403599748,
+          "p": 0.275,
+          "cobertura": 0.5833333333333334
+        }
+      },
+      "S1": {
+        "densidad": 0.6108870967741935,
+        "desalineacion_grados": 80.1397081361139,
+        "correcto": {
+          "z": 3.2265895041276376,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 2.196564568006109,
+          "p": 0.055
+        },
+        "recorte": {
+          "z": 1.2611061057258586,
+          "p": 0.135,
+          "cobertura": 0.23333333333333334
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.678391959798995,
+        "agua_fraccion_celdas": 0.21498115577889448,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 54,
+      "theta_grados": 40.041278040941116,
+      "S0": {
+        "densidad": 0.22782258064516128,
+        "desalineacion_grados": 58.8595252031912,
+        "correcto": {
+          "z": 0.11627685326530043,
+          "p": 0.31
+        },
+        "agua": {
+          "z": -0.49878461018321946,
+          "p": 0.605
+        },
+        "recorte": {
+          "z": -0.41214466476216133,
+          "p": 0.57,
+          "cobertura": 0.23333333333333334
+        }
+      },
+      "S1": {
+        "densidad": 0.5080645161290323,
+        "desalineacion_grados": 77.43987154821093,
+        "correcto": {
+          "z": 5.087426834983212,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 1.8677473113052934,
+          "p": 0.06
+        },
+        "recorte": {
+          "z": 7.146927240285444,
+          "p": 0.005,
+          "cobertura": 0.4666666666666667
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6633165829145728,
+        "agua_fraccion_celdas": 0.20571608040201006,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 55,
+      "theta_grados": 149.8053930218911,
+      "S0": {
+        "densidad": 0.5080645161290323,
+        "desalineacion_grados": 68.77226676000859,
+        "correcto": {
+          "z": 1.7759182363590114,
+          "p": 0.085
+        },
+        "agua": {
+          "z": 1.0215215059086358,
+          "p": 0.17
+        },
+        "recorte": {
+          "z": 0.7122632877329652,
+          "p": 0.26,
+          "cobertura": 0.3888888888888889
+        }
+      },
+      "S1": {
+        "densidad": 0.8084677419354839,
+        "desalineacion_grados": 79.92487579291547,
+        "correcto": {
+          "z": 4.386097260165944,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 2.9122290072630035,
+          "p": 0.02
+        },
+        "recorte": {
+          "z": 2.284141142144032,
+          "p": 0.005,
+          "cobertura": 0.5833333333333334
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6884422110552764,
+        "agua_fraccion_celdas": 0.20964195979899497,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 56,
+      "theta_grados": 130.7026889934372,
+      "S0": {
+        "densidad": 0.2923387096774194,
+        "desalineacion_grados": 70.45059826714325,
+        "correcto": {
+          "z": 0.3979330323346547,
+          "p": 0.22
+        },
+        "agua": {
+          "z": 0.32213391479985015,
+          "p": 0.225
+        },
+        "recorte": {
+          "z": 0.4119219389859047,
+          "p": 0.26,
+          "cobertura": 0.4111111111111111
+        }
+      },
+      "S1": {
+        "densidad": 0.7479838709677419,
+        "desalineacion_grados": 84.9368350072452,
+        "correcto": {
+          "z": 4.607916611779196,
+          "p": 0.01
+        },
+        "agua": {
+          "z": 4.147761240970557,
+          "p": 0.02
+        },
+        "recorte": {
+          "z": 2.656344004230423,
+          "p": 0.015,
+          "cobertura": 0.5944444444444444
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6231155778894473,
+        "agua_fraccion_celdas": 0.17399497487437185,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 57,
+      "theta_grados": 123.15000656799752,
+      "S0": {
+        "densidad": 0.21370967741935484,
+        "desalineacion_grados": 32.93591988014343,
+        "correcto": {
+          "z": -0.7483275421286363,
+          "p": 0.805
+        },
+        "agua": {
+          "z": -0.8252209339808063,
+          "p": 0.89
+        },
+        "recorte": {
+          "z": -0.8644265938057917,
+          "p": 0.815,
+          "cobertura": 0.15
+        }
+      },
+      "S1": {
+        "densidad": 0.6693548387096774,
+        "desalineacion_grados": 81.61349874129915,
+        "correcto": {
+          "z": 3.5719911844045185,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 1.8816192880929137,
+          "p": 0.075
+        },
+        "recorte": {
+          "z": 1.8748292240626803,
+          "p": 0.04,
+          "cobertura": 0.46111111111111114
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.7135678391959799,
+        "agua_fraccion_celdas": 0.27810929648241206,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 58,
+      "theta_grados": 55.62212410192406,
+      "S0": {
+        "densidad": 0.2600806451612903,
+        "desalineacion_grados": 2.2547688600440066,
+        "correcto": {
+          "z": 0.07312442753114683,
+          "p": 0.355
+        },
+        "agua": {
+          "z": -0.47000191874544545,
+          "p": 0.605
+        },
+        "recorte": {
+          "z": 0.43754234905454403,
+          "p": 0.175,
+          "cobertura": 0.5555555555555556
+        }
+      },
+      "S1": {
+        "densidad": 0.6350806451612904,
+        "desalineacion_grados": 76.73379279491918,
+        "correcto": {
+          "z": 4.985334156456561,
+          "p": 0.005
+        },
+        "agua": {
+          "z": 1.7243284319664494,
+          "p": 0.075
+        },
+        "recorte": {
+          "z": 3.836223868191948,
+          "p": 0.02,
+          "cobertura": 0.4777777777777778
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6984924623115578,
+        "agua_fraccion_celdas": 0.2295854271356784,
+        "cobertura_region_completa": 1.0
+      }
+    },
+    {
+      "semilla": 59,
+      "theta_grados": 105.79448855994558,
+      "S0": {
+        "densidad": 0.20362903225806453,
+        "desalineacion_grados": 80.93528159845945,
+        "correcto": {
+          "z": -0.9083734349806928,
+          "p": 0.905
+        },
+        "agua": {
+          "z": -0.9269143904994687,
+          "p": 0.945
+        },
+        "recorte": {
+          "z": -1.303083238095855,
+          "p": 0.95,
+          "cobertura": 0.4166666666666667
+        }
+      },
+      "S1": {
+        "densidad": 0.7237903225806451,
+        "desalineacion_grados": 79.15541650347889,
+        "correcto": {
+          "z": 3.0601177919405766,
+          "p": 0.015
+        },
+        "agua": {
+          "z": 1.7225477315929347,
+          "p": 0.075
+        },
+        "recorte": {
+          "z": 2.2918675618507347,
+          "p": 0.03,
+          "cobertura": 0.15
+        }
+      },
+      "diagnosticos": {
+        "agua_nulos_que_pisan": 0.6180904522613065,
+        "agua_fraccion_celdas": 0.2352386934673367,
+        "cobertura_region_completa": 1.0
+      }
+    }
+  ],
+  "resumen": {
+    "S0": {
+      "correcto": {
+        "z_media": -0.030897839892393402,
+        "z_sd": 0.886284137980077,
+        "rechazo": 0.016666666666666666,
+        "rechazo_ic95": [
+          0.002948083860873682,
+          0.08855338226779477
+        ],
+        "ks_D": 0.04833333333333334,
+        "ks_p_uniforme": 0.9986668484653345,
+        "n": 60
+      },
+      "agua": {
+        "z_media": -0.40434664402057624,
+        "z_sd": 0.5757409530776021,
+        "rechazo": 0.0,
+        "rechazo_ic95": [
+          0.0,
+          0.06017393047793289
+        ],
+        "ks_D": 0.235,
+        "ks_p_uniforme": 0.0021007284819218276,
+        "n": 60
+      },
+      "recorte": {
+        "z_media": -0.04159797078514264,
+        "z_sd": 0.8651170655482264,
+        "rechazo": 0.03333333333333333,
+        "rechazo_ic95": [
+          0.009189126490150246,
+          0.11363987528925378
+        ],
+        "ks_D": 0.09666666666666668,
+        "ks_p_uniforme": 0.6074267537028724,
+        "n": 60
+      }
+    },
+    "S1": {
+      "correcto": {
+        "z_media": 3.1736942814883835,
+        "z_sd": 1.0214450991310065,
+        "rechazo": 0.8166666666666667,
+        "rechazo_ic95": [
+          0.7008000677353371,
+          0.8944231096286387
+        ],
+        "ks_D": 0.8633333333333333,
+        "ks_p_uniforme": 1.2575690220817282e-40,
+        "n": 60
+      },
+      "agua": {
+        "z_media": 1.6161156050258396,
+        "z_sd": 0.7499524799622082,
+        "rechazo": 0.23333333333333334,
+        "rechazo_ic95": [
+          0.1443943161843107,
+          0.3543651134039202
+        ],
+        "ks_D": 0.715,
+        "ks_p_uniforme": 5.335642430477703e-28,
+        "n": 60
+      },
+      "recorte": {
+        "z_media": 1.975599945656568,
+        "z_sd": 1.0767506318493154,
+        "rechazo": 0.45,
+        "rechazo_ic95": [
+          0.33093453853760824,
+          0.575082854510185
+        ],
+        "ks_D": 0.7,
+        "ks_p_uniforme": 7.447241021911787e-27,
+        "n": 60
+      }
+    },
+    "mecanismo_recorte": {
+      "dz_medio": -0.010700130892749264,
+      "dz_sd": 0.6173350925788075,
+      "dz_abs_medio": 0.4565981956476388,
+      "spearman_desalineacion": -0.4884690191719923,
+      "p_spearman": 0.00029997000299970003
+    },
+    "diagnosticos": {
+      "agua_nulos_que_pisan_media": 0.6969011725293133,
+      "agua_fraccion_celdas_media": 0.23005391541038525,
+      "cobertura_completa_media": 1.0,
+      "cobertura_recorte_S0_media": 0.3501851851851852
+    },
+    "potencia_teorica_S1_correcto": 0.84575
+  }
+}

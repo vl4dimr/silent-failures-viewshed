@@ -1,0 +1,181 @@
+{
+  "motor_correcto": {
+    "casos": [
+      {
+        "prueba": "plano a 3 km: se ve",
+        "esperado": true,
+        "obtenido": true,
+        "pasa": true
+      },
+      {
+        "prueba": "barrera de 50 m a media distancia: tapa",
+        "esperado": false,
+        "obtenido": false,
+        "pasa": true
+      },
+      {
+        "prueba": "barrera rebajada a 1 m a 3 km: no tapa",
+        "esperado": true,
+        "obtenido": true,
+        "pasa": true
+      },
+      {
+        "prueba": "depresion a 3 km: nunca tapa",
+        "esperado": true,
+        "obtenido": true,
+        "pasa": true
+      },
+      {
+        "prueba": "barrera de 2 m: no tapa a 3 km",
+        "esperado": true,
+        "obtenido": true,
+        "pasa": true
+      },
+      {
+        "prueba": "la misma barrera de 2 m si tapa a 12 km",
+        "esperado": false,
+        "obtenido": false,
+        "pasa": true
+      },
+      {
+        "prueba": "barrera de una sola celda a 3 km: tapa igual",
+        "esperado": false,
+        "obtenido": false,
+        "pasa": true
+      },
+      {
+        "prueba": "objetivo a ras de suelo tras loma de 12 m: no se ve",
+        "esperado": false,
+        "obtenido": false,
+        "pasa": true
+      },
+      {
+        "prueba": "mismo caso con objetivo de 30 m: se ve",
+        "esperado": true,
+        "obtenido": true,
+        "pasa": true
+      },
+      {
+        "prueba": "observador sobre una cima: no se tapa a si mismo",
+        "esperado": true,
+        "obtenido": true,
+        "pasa": true
+      },
+      {
+        "prueba": "objetivo sobre una cima: sigue viendose",
+        "esperado": true,
+        "obtenido": true,
+        "pasa": true
+      },
+      {
+        "prueba": "plano justo por debajo de la distancia critica (8.8 km): se ve",
+        "esperado": true,
+        "obtenido": true,
+        "pasa": true
+      },
+      {
+        "prueba": "plano bien por encima de la critica (18.8 km): la curvatura tapa",
+        "esperado": false,
+        "obtenido": false,
+        "pasa": true
+      },
+      {
+        "prueba": "plano a 40 km: mas alla del horizonte geometrico",
+        "esperado": false,
+        "obtenido": false,
+        "pasa": true
+      },
+      {
+        "prueba": "plano a 1 km: la curvatura no cambia nada",
+        "esperado": true,
+        "obtenido": true,
+        "pasa": true
+      }
+    ],
+    "propiedades": [
+      {
+        "prueba": "reciprocidad de la vision",
+        "violaciones": 0,
+        "comprobaciones": 160,
+        "pasa": true
+      },
+      {
+        "prueba": "monotonia en la altura del observador",
+        "violaciones": 0,
+        "comprobaciones": 160,
+        "pasa": true
+      },
+      {
+        "prueba": "monotonia en la distancia sobre plano",
+        "violaciones": 0,
+        "comprobaciones": 6,
+        "pasa": true
+      },
+      {
+        "prueba": "monotonia en la altura de la barrera",
+        "violaciones": 0,
+        "comprobaciones": 7,
+        "pasa": true
+      }
+    ],
+    "pruebas": 19,
+    "fallos": 0
+  },
+  "mutantes": {
+    "curvatura_restada": {
+      "detectado": true,
+      "equivalente": false,
+      "comparaciones_equivalencia": 0,
+      "pruebas_que_saltan": 3,
+      "de": 19,
+      "cuales": [
+        "la misma barrera de 2 m si tapa a 12 km",
+        "plano bien por encima de la critica (18.8 km): la curvatura tapa",
+        "plano a 40 km: mas alla del horizonte geometrico"
+      ]
+    },
+    "sin_curvatura": {
+      "detectado": true,
+      "equivalente": false,
+      "comparaciones_equivalencia": 0,
+      "pruebas_que_saltan": 3,
+      "de": 19,
+      "cuales": [
+        "la misma barrera de 2 m si tapa a 12 km",
+        "plano bien por encima de la critica (18.8 km): la curvatura tapa",
+        "plano a 40 km: mas alla del horizonte geometrico"
+      ]
+    },
+    "altura_objetivo_nula": {
+      "detectado": true,
+      "equivalente": false,
+      "comparaciones_equivalencia": 0,
+      "pruebas_que_saltan": 4,
+      "de": 19,
+      "cuales": [
+        "barrera rebajada a 1 m a 3 km: no tapa",
+        "barrera de 2 m: no tapa a 3 km",
+        "mismo caso con objetivo de 30 m: se ve",
+        "plano justo por debajo de la distancia critica (8.8 km): se ve"
+      ]
+    },
+    "extremos_incluidos": {
+      "detectado": false,
+      "equivalente": true,
+      "comparaciones_equivalencia": 5888,
+      "pruebas_que_saltan": 0,
+      "de": 19,
+      "cuales": []
+    },
+    "muestreo_grueso": {
+      "detectado": true,
+      "equivalente": false,
+      "comparaciones_equivalencia": 0,
+      "pruebas_que_saltan": 1,
+      "de": 19,
+      "cuales": [
+        "barrera de una sola celda a 3 km: tapa igual"
+      ]
+    }
+  }
+}

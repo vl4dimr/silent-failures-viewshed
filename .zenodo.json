@@ -1,0 +1,33 @@
+{
+  "title": "Reproducible and wrong: silent failures in archaeological visibility analysis and a benchmark to catch them — code, benchmark and landscape laboratory",
+  "description": "Defect-injectable line-of-sight engine, an executable benchmark (terrain cases with derived expectations plus behavioural properties) audited by mutation analysis, and a synthetic-landscape laboratory with ground truth by construction that measures what design-level defects (unmasked water, tightly cropped null-sampling regions) do to statistical inference. Includes every result file, the figure and manuscript generators, and the audit. NumPy-only. Companion deposit to the manuscript of the same title.",
+  "creators": [
+    {
+      "name": "Mamani Calisaya, Milton Vladimir",
+      "orcid": "0000-0002-0676-0989",
+      "affiliation": "Universidad Nacional del Altiplano, Puno, Perú"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "viewshed analysis",
+    "line of sight",
+    "software validation",
+    "mutation testing",
+    "metamorphic testing",
+    "computational reproducibility",
+    "null models",
+    "GIS",
+    "landscape archaeology",
+    "synthetic benchmarks"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "cites",
+      "identifier": "10.5281/zenodo.22176260",
+      "resource_type": "software"
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "ok": 52,
+  "fallos": 0,
+  "items": [
+    {
+      "bloque": "formato",
+      "check": "fuente única Arial",
+      "ok": true,
+      "detalle": "fuentes ['Arial']"
+    },
+    {
+      "bloque": "formato",
+      "check": "página A4 con márgenes de 2.5 cm",
+      "ok": true,
+      "detalle": "21.0 x 29.7 cm"
+    },
+    {
+      "bloque": "formato",
+      "check": "texto corrido justificado",
+      "ok": true,
+      "detalle": "35 de 35"
+    },
+    {
+      "bloque": "formato",
+      "check": "sin correos, filiación ni bloque de autores",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "formato",
+      "check": "sin marcadores de posición entre corchetes",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "figuras",
+      "check": "fig_pipeline.png: resolución",
+      "ok": true,
+      "detalle": "1890x1445 px, 299 dpi"
+    },
+    {
+      "bloque": "figuras",
+      "check": "fig_anatomia.png: resolución",
+      "ok": true,
+      "detalle": "3000x1680 px, 299 dpi"
+    },
+    {
+      "bloque": "figuras",
+      "check": "fig_laboratorio.png: resolución",
+      "ok": true,
+      "detalle": "2291x1319 px, 299 dpi"
+    },
+    {
+      "bloque": "figuras",
+      "check": "fig_consecuencias.png: resolución",
+      "ok": true,
+      "detalle": "3150x990 px, 299 dpi"
+    },
+    {
+      "bloque": "figuras",
+      "check": "cuatro figuras incrustadas",
+      "ok": true,
+      "detalle": "4"
+    },
+    {
+      "bloque": "figuras",
+      "check": "Figure 1 citada en el texto",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "figuras",
+      "check": "Figure 2 citada en el texto",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "figuras",
+      "check": "Figure 3 citada en el texto",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "figuras",
+      "check": "Figure 4 citada en el texto",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "figuras",
+      "check": "cuatro pies de figura",
+      "ok": true,
+      "detalle": "4"
+    },
+    {
+      "bloque": "figuras",
+      "check": "Table 1 citada en el texto",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "figuras",
+      "check": "Table 2 citada en el texto",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "figuras",
+      "check": "Table 3 citada en el texto",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "números",
+      "check": "total de pruebas del banco",
+      "ok": true,
+      "detalle": "19"
+    },
+    {
+      "bloque": "números",
+      "check": "casos y propiedades",
+      "ok": true,
+      "detalle": "15 + 4"
+    },
+    {
+      "bloque": "números",
+      "check": "distancia crítica derivada",
+      "ok": true,
+      "detalle": "11.7 km"
+    },
+    {
+      "bloque": "números",
+      "check": "comparaciones del barrido de equivalencia",
+      "ok": true,
+      "detalle": "5,888"
+    },
+    {
+      "bloque": "números",
+      "check": "matriz de mutantes: curvatura_restada",
+      "ok": true,
+      "detalle": "3 / 19"
+    },
+    {
+      "bloque": "números",
+      "check": "matriz de mutantes: sin_curvatura",
+      "ok": true,
+      "detalle": "3 / 19"
+    },
+    {
+      "bloque": "números",
+      "check": "matriz de mutantes: altura_objetivo_nula",
+      "ok": true,
+      "detalle": "4 / 19"
+    },
+    {
+      "bloque": "números",
+      "check": "matriz de mutantes: extremos_incluidos",
+      "ok": true,
+      "detalle": "0 / 19"
+    },
+    {
+      "bloque": "números",
+      "check": "matriz de mutantes: muestreo_grueso",
+      "ok": true,
+      "detalle": "1 / 19"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla 3: z de S0/correcto",
+      "ok": true,
+      "detalle": "-0.03 (0.89)"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla 3: z de S0/agua",
+      "ok": true,
+      "detalle": "-0.40 (0.58)"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla 3: z de S0/recorte",
+      "ok": true,
+      "detalle": "-0.04 (0.87)"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla 3: z de S1/correcto",
+      "ok": true,
+      "detalle": "3.17 (1.02)"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla 3: z de S1/agua",
+      "ok": true,
+      "detalle": "1.62 (0.75)"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla 3: z de S1/recorte",
+      "ok": true,
+      "detalle": "1.98 (1.08)"
+    },
+    {
+      "bloque": "números",
+      "check": "potencia teórica",
+      "ok": true,
+      "detalle": "85 %"
+    },
+    {
+      "bloque": "números",
+      "check": "rho de Spearman del mecanismo",
+      "ok": true,
+      "detalle": "-0.49"
+    },
+    {
+      "bloque": "números",
+      "check": "cobertura del recorte (D2)",
+      "ok": true,
+      "detalle": "35 %"
+    },
+    {
+      "bloque": "números",
+      "check": "z corregida del caso de campo",
+      "ok": true,
+      "detalle": "+2.63"
+    },
+    {
+      "bloque": "números",
+      "check": "z del agua sin enmascarar",
+      "ok": true,
+      "detalle": "-0.08"
+    },
+    {
+      "bloque": "números",
+      "check": "z del recorte del caso de campo",
+      "ok": true,
+      "detalle": "+4.49"
+    },
+    {
+      "bloque": "números",
+      "check": "distancia de la figura 1",
+      "ok": true,
+      "detalle": "21.0 km"
+    },
+    {
+      "bloque": "números",
+      "check": "réplicas y nulos del laboratorio",
+      "ok": true,
+      "detalle": "60, 199"
+    },
+    {
+      "bloque": "prosa",
+      "check": "toda referencia listada está citada",
+      "ok": true,
+      "detalle": "12 referencias"
+    },
+    {
+      "bloque": "prosa",
+      "check": "inglés británico consistente",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "prosa",
+      "check": "toda referencia lleva DOI en forma Ubiquity",
+      "ok": true,
+      "detalle": "12 de 12"
+    },
+    {
+      "bloque": "jcaa",
+      "check": "resumen de 250 palabras como máximo (JAS)",
+      "ok": true,
+      "detalle": "250"
+    },
+    {
+      "bloque": "jcaa",
+      "check": "8 500 palabras como máximo, referencias incluidas",
+      "ok": true,
+      "detalle": "4295"
+    },
+    {
+      "bloque": "jcaa",
+      "check": "citas Harvard, sin coma antes del año",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jcaa",
+      "check": "referencias con el año sin paréntesis",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jcaa",
+      "check": "encabezados numerados de hasta tres niveles",
+      "ok": true,
+      "detalle": "profundidades: [1, 2]"
+    },
+    {
+      "bloque": "fichero",
+      "check": "sin autor ni rastro del generador",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "fichero",
+      "check": "los metadatos XML no delatan nada",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "fichero",
+      "check": "fecha de creación verosímil",
+      "ok": true,
+      "detalle": "2026"
+    }
+  ]
+}
