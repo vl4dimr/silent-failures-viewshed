@@ -1,6 +1,6 @@
 {
-  "ok": 52,
-  "fallos": 0,
+  "ok": 51,
+  "fallos": 1,
   "items": [
     {
       "bloque": "formato",
@@ -42,19 +42,19 @@
       "bloque": "figuras",
       "check": "fig_anatomia.png: resolución",
       "ok": true,
-      "detalle": "3000x1680 px, 299 dpi"
+      "detalle": "1830x1470 px, 299 dpi"
     },
     {
       "bloque": "figuras",
       "check": "fig_laboratorio.png: resolución",
-      "ok": true,
-      "detalle": "2291x1319 px, 299 dpi"
+      "ok": false,
+      "detalle": "1674x1254 px, 299 dpi"
     },
     {
       "bloque": "figuras",
       "check": "fig_consecuencias.png: resolución",
       "ok": true,
-      "detalle": "3150x990 px, 299 dpi"
+      "detalle": "1830x750 px, 299 dpi"
     },
     {
       "bloque": "figuras",

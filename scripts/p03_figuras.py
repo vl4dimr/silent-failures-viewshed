@@ -35,20 +35,24 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RES = os.path.join(BASE, "results")
 FIG = os.path.join(RES, "figuras")
 
+# El sistema visual de la figura 1 (pipeline), aplicado a los graficos de datos:
+# tinta y grises para la estructura, azul para lo corregido/el agua como
+# procedimiento, rojo como unico acento semantico (defectos, bloqueos, exclusiones).
+# Los lienzos miden lo que mediran impresos: los cuerpos nominales son reales.
 plt.rcParams.update({
-    "font.family": "Arial", "font.size": 8.5,
-    "axes.linewidth": 0.6, "axes.edgecolor": "#444444",
-    "xtick.color": "#444444", "ytick.color": "#444444",
-    "axes.labelcolor": "#222222", "text.color": "#222222",
+    "font.family": "Arial", "font.size": 7.5,
+    "axes.linewidth": 0.6, "axes.edgecolor": "#c7cdd6",
+    "xtick.color": "#6b7280", "ytick.color": "#6b7280",
+    "axes.labelcolor": "#374151", "text.color": "#111827",
 })
 
-C_TERRENO = "#b9a888"
-C_TERRENO_L = "#e4dcc8"
-C_CORR = "#5b7ea8"
-C_VISTA = "#333333"
-C_MAL = "#b0413e"
-C_OK = "#3d7a4a"
-C_AGUA = "#a8c6dd"
+C_TERRENO = "#a8a29e"
+C_TERRENO_L = "#e7e5e4"
+C_CORR = "#2b5da8"
+C_VISTA = "#111827"
+C_MAL = "#b91c1c"
+C_OK = "#475569"
+C_AGUA = "#c9d8e8"
 
 
 # ------------------------------------------------------------------- figura 1
@@ -117,13 +121,13 @@ def perfil(ax, dem, c1, defecto, titulo, veredicto, color_v):
 
 def figura1():
     dem, c1, sem = buscar_par_curvatura()
-    fig, axs = plt.subplots(2, 2, figsize=(10, 5.6))
+    fig, axs = plt.subplots(2, 2, figsize=(6.10, 4.9))
 
     perfil(axs[0, 0], dem, c1, None,
            "(a) Correct engine — %.1f km" % (c1 * RES1D / 1000),
            "BLOCKED", C_MAL)
     perfil(axs[0, 1], dem, c1, "curvatura_restada",
-           "(b) Same pair, curvature subtracted instead of added",
+           "(b) Curvature subtracted, same pair",
            "CLEAR", C_OK)
 
     # (c) muestreo grueso: la barrera de una celda queda entre dos muestras
@@ -139,7 +143,7 @@ def figura1():
     ax.plot(prg["d"] / 1000.0, prg["z"], "o", ms=4, color=C_MAL, mfc="white",
             label="coarse samples (10)")
     ax.plot(kmb, prb["vista"], color=C_VISTA, lw=0.9, ls="--")
-    ax.set_title("(c) Coarse sampling — an 80 m barrier falls between samples",
+    ax.set_title("(c) Coarse sampling misses an 80 m barrier",
                  fontsize=8.5, loc="left")
     ax.text(0.985, 0.06, "CLEAR", transform=ax.transAxes, ha="right",
             fontsize=8.5, fontweight="bold", color=C_OK)
@@ -149,7 +153,7 @@ def figura1():
     # (d) el mismo par de (a) recortado a corta distancia: todo motor coincide
     c_corto = int(c1 * 0.15)
     perfil(axs[1, 1], dem, c_corto, None,
-           "(d) Same terrain at %.1f km — every variant agrees" % (c_corto * RES1D / 1000),
+           "(d) At %.1f km every variant agrees" % (c_corto * RES1D / 1000),
            "CLEAR", C_OK)
 
     axs[0, 0].legend(loc="upper left", frameon=False, fontsize=7.5)
@@ -188,7 +192,7 @@ def figura2():
     cob_full = cobertura_orientaciones(dem, dc, dr)
     cob_tight = cobertura_orientaciones(dem, dc, dr, reg)
 
-    fig = plt.figure(figsize=(10, 4.6))
+    fig = plt.figure(figsize=(6.35, 4.5))
     gs = fig.add_gridspec(2, 2, width_ratios=[1.55, 1], hspace=0.42, wspace=0.16)
 
     # (a) el paisaje
@@ -204,14 +208,15 @@ def figura2():
         col = intento_colocacion(dem, agua, dc, dr, rng2)
         if col is None:
             continue
-        ax.plot(col[0], col[1], ".", ms=2.2, color="#888888", alpha=0.75)
+        ax.plot(col[0], col[1], ".", ms=2.2, color="#9ca3af", alpha=0.85)
         fantasmas += 1
     ax.plot(cc, fr, ".", ms=3.2, color=C_MAL)
     rmin, rmax, cmin, cmax = reg
     ax.add_patch(Rectangle((cmin, rmin), cmax - cmin, rmax - rmin,
                            fill=False, ec=C_MAL, lw=1.1, ls="--"))
     ax.text(cmin, rmin - 6, "tightly cropped sampling region", fontsize=7.5,
-            color=C_MAL)
+            color=C_MAL, bbox=dict(facecolor="#ffffff", edgecolor="none",
+                                   pad=1.6, alpha=0.9))
     ax.set_title("(a) Synthetic landscape: lake, observed cloud (red),\n"
                  "null placements (grey), and the crop defect (dashed)",
                  fontsize=8.5, loc="left")
@@ -219,9 +224,10 @@ def figura2():
     # barra de escala: 5 km son 167 celdas de 30 m
     h, w = dem.shape
     x0, y0, celdas = w * 0.05, h * 0.95, 5000.0 / 30.0
-    ax.plot([x0, x0 + celdas], [y0, y0], color="#222222", lw=2.2,
+    ax.plot([x0, x0 + celdas], [y0, y0], color="#111827", lw=2.2,
             solid_capstyle="butt")
-    ax.text(x0 + celdas / 2, y0 - 7, "5 km", ha="center", fontsize=7.5)
+    ax.text(x0 + celdas / 2, y0 - 7, "5 km", ha="center", fontsize=7.5,
+            bbox=dict(facecolor="#ffffff", edgecolor="none", pad=1.4, alpha=0.9))
 
     # (b) cobertura de orientaciones, region completa
     for fila, (region, cob, tit) in enumerate((
@@ -264,11 +270,11 @@ def figura2():
 def figura3():
     cal = json.load(open(os.path.join(RES, "calibracion.json"), encoding="utf-8"))
     reps, res = cal["replicas"], cal["resumen"]
-    PROCS = [("correcto", "correct", "#3d7a4a"),
-             ("agua", "water unmasked", "#5b7ea8"),
-             ("recorte", "tight crop", "#b0413e")]
+    PROCS = [("correcto", "correct", "#475569"),
+             ("agua", "water unmasked", "#2b5da8"),
+             ("recorte", "tight crop", "#b91c1c")]
 
-    fig, axs = plt.subplots(1, 3, figsize=(10.5, 3.3))
+    fig, axs = plt.subplots(1, 3, figsize=(6.10, 2.5))
 
     # (a) calibracion: ECDF de p en S0
     ax = axs[0]
@@ -281,27 +287,29 @@ def figura3():
     ax.set_xlabel("p-value under no effect (S0)")
     ax.set_ylabel("empirical CDF")
     ax.set_title("(a) Calibration: p should be uniform", fontsize=8.5, loc="left")
-    ax.legend(frameon=False, fontsize=7.5, loc="lower right")
+    ax.legend(frameon=False, fontsize=7.0, loc="upper left")
     ax.set_xlim(0, 1); ax.set_ylim(0, 1)
 
     # (b) potencia: z en S1 por procedimiento
     ax = axs[1]
     rng = np.random.default_rng(3)
+    etiquetas = []
     for i, (clave, eti, color) in enumerate(PROCS):
         zs = np.array([r["S1"][clave]["z"] for r in reps])
         xj = i + rng.uniform(-0.13, 0.13, len(zs))
-        ax.plot(xj, zs, ".", ms=3.5, color=color, alpha=0.7)
+        ax.plot(xj, zs, ".", ms=3.2, color=color, alpha=0.7)
         ax.hlines(np.mean(zs), i - 0.22, i + 0.22, color=color, lw=1.6)
-        pot = res["S1"][clave]["rechazo"]
-        ax.text(i, ax.get_ylim()[0], "", fontsize=7)
-        ax.annotate("power %.0f %%" % (100 * pot), (i, np.max(zs)),
-                    xytext=(0, 7), textcoords="offset points",
-                    ha="center", fontsize=7.5, color=color)
-    ax.axhline(0, color="#999999", lw=0.6, ls=":")
+        corta = {"correct": "correct", "water unmasked": "water",
+                 "tight crop": "crop"}[eti]
+        # la potencia va bajo cada columna, no flotando sobre los puntos
+        etiquetas.append("%s\n%.0f %%"
+                         % (corta, 100 * res["S1"][clave]["rechazo"]))
+    ax.axhline(0, color="#c7cdd6", lw=0.6, ls=":")
     ax.set_xticks(range(len(PROCS)))
-    ax.set_xticklabels([e for _, e, _ in PROCS], fontsize=7.5)
+    ax.set_xticklabels(etiquetas, fontsize=7.0)
+    ax.set_xlim(-0.5, len(PROCS) - 0.5)
     ax.set_ylabel("z under a real effect (S1)")
-    ax.set_title("(b) Power: theoretical ceiling %.0f %%"
+    ax.set_title("(b) Power (ceiling %.0f %%)"
                  % (100 * res["potencia_teorica_S1_correcto"]),
                  fontsize=8.5, loc="left")
 
@@ -310,15 +318,18 @@ def figura3():
     des = [r["S0"]["desalineacion_grados"] for r in reps]
     dz = [r["S0"]["recorte"]["z"] - r["S0"]["correcto"]["z"] for r in reps]
     ax.axhline(0, color="#999999", lw=0.6, ls=":")
-    ax.plot(des, dz, "o", ms=3.6, color="#b0413e", alpha=0.75, mec="none")
+    ax.plot(des, dz, "o", ms=3.6, color="#b91c1c", alpha=0.75, mec="none")
     m = res["mecanismo_recorte"]
-    ax.set_xlabel("cloud–terrain-grain misalignment (degrees)")
+    ax.set_xlabel("misalignment with terrain grain (°)")
     ax.set_ylabel(r"$\Delta z$ (tight crop $-$ correct)")
     p_rho = ("p < 0.001" if m["p_spearman"] < 0.001
              else "p = %.3f" % m["p_spearman"])
-    ax.set_title("(c) Crop bias vs. terrain grain "
-                 r"($\rho_s$ = %+.2f, %s)" % (m["spearman_desalineacion"], p_rho),
-                 fontsize=8.5, loc="left")
+    ax.set_title("(c) Crop bias vs. terrain grain", fontsize=8.5, loc="left")
+    # la correlacion, dentro del panel y sobre hueco limpio
+    ax.text(0.97, 0.95, r"$\rho_s$ = %+.2f, %s"
+            % (m["spearman_desalineacion"], p_rho),
+            transform=ax.transAxes, ha="right", va="top", fontsize=7.2,
+            color="#374151")
 
     fig.tight_layout(pad=1.1)
     fig.savefig(os.path.join(FIG, "fig_consecuencias.png"), dpi=300)

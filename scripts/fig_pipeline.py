@@ -110,11 +110,13 @@ def dibujar(base):
 
     # ---- diagnosticos, sobre el eje central ---------------------------------
     ax.text(0.5, 0.192, "D I A G N O S T I C S   ·   A N Y   R E A L   S T U D Y",
-            ha="center", va="top", fontsize=6.4, color=SUAVE)
+            ha="center", va="top", fontsize=6.4, color=SUAVE, zorder=4,
+            bbox=dict(facecolor="#ffffff", edgecolor="none", pad=2.0))
     ax.text(0.5, 0.158,
             "D1  null placements touching water = 0        "
             "D2  orientation coverage = 100 %",
-            ha="center", va="top", fontsize=7.6, color=TINTA)
+            ha="center", va="top", fontsize=7.6, color=TINTA, zorder=4,
+            bbox=dict(facecolor="#ffffff", edgecolor="none", pad=2.0))
 
     # ---- la regla final, tras un filete -------------------------------------
     ax.plot([0.18, 0.82], [0.062, 0.062], color=RAIL, lw=0.8)
