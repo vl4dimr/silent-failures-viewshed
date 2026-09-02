@@ -61,6 +61,11 @@ MEC = RESU["mecanismo_recorte"]
 DIAG = RESU["diagnosticos"]
 
 DOI_CASO = "10.5281/zenodo.22176260"
+DOI_ESTE_TXT = DOI_ESTE if "DOI_ESTE" in dir() else None
+AUTOR = "Milton Vladimir Mamani Calisaya"
+FILIACION = "Universidad Nacional del Altiplano, Puno, Perú"
+CORREO = "mmamanic@unap.edu.pe"
+ORCID_A = "0000-0002-0676-0989"
 DOI_ESTE = "10.5281/zenodo.22242923"
 
 
@@ -277,8 +282,14 @@ P("Silent failures in archaeological visibility analysis and a benchmark to catc
   12, align=WD_ALIGN_PARAGRAPH.CENTER, after=0, color=TINTA_SUAVE, italic=True)
 _regla = doc.add_paragraph()
 _regla.paragraph_format.space_before = Pt(10)
-_regla.paragraph_format.space_after = Pt(16)
+_regla.paragraph_format.space_after = Pt(12)
 _borde_parrafo(_regla, "bottom", sz=8, espacio=1)
+
+# bloque de autoria: revision de anonimo simple, sin portada separada
+P(AUTOR, 11, True, align=WD_ALIGN_PARAGRAPH.CENTER, after=2)
+P(FILIACION, 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, after=2, color=TINTA_SUAVE)
+P("Corresponding author: %s  ·  ORCID %s" % (CORREO, ORCID_A),
+  9, align=WD_ALIGN_PARAGRAPH.CENTER, after=16, color=TINTA_SUAVE)
 
 etiqueta("Abstract")
 P("Computational reproducibility guarantees that an analysis can be re-run and will return the same "
@@ -665,6 +676,19 @@ P("The engine with switchable defects, the benchmark, the mutation harness, the 
   "(concept identifier, resolving to the latest version)." % (DOI_CASO, DOI_ESTE))
 
 # ================================================================== references
+etiqueta("Funding", after=3)
+P("This research received no specific grant from any funding agency in the public, commercial, "
+  "or not-for-profit sectors.", after=8)
+
+etiqueta("CRediT authorship contribution statement", after=3)
+P("%s: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, "
+  "Data curation, Writing – original draft, Writing – review & editing, Visualization."
+  % AUTOR, after=8)
+
+etiqueta("Declaration of competing interests", after=3)
+P("The author declares no competing financial interests or personal relationships that could "
+  "have appeared to influence the work reported in this paper.", after=8)
+
 etiqueta("Declaration of generative AI in the manuscript preparation process", after=3)
 P("During the preparation of this work the author used Claude (Anthropic) to assist in developing "
   "and testing the analysis code, drafting the manuscript, and generating the figures. The author "

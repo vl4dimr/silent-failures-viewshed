@@ -86,13 +86,12 @@ def main():
     check("formato", "texto corrido justificado", just == len(cuerpo),
           "%d de %d" % (just, len(cuerpo)))
 
-    # anonimato: sin correos, sin filiacion, sin bloque de autores. La cita al
-    # deposito del caso de campo es legitima: se cita en tercera persona, como
-    # cualquier otro trabajo.
-    delata = [w for w in ("@unap", "@gmail", "Universidad Nacional del Altiplano",
-                          "Corresponding author", "ORCID") if w in texto]
-    check("formato", "sin correos, filiación ni bloque de autores", not delata,
-          "aparece: %s" % delata if delata else "")
+    # JAS revisa en anonimo simple y no admite portada aparte: la autoria debe
+    # estar en el manuscrito, completa (nombre, filiacion, correspondencia, ORCID).
+    presentes = [w for w in ("Mamani Calisaya", "Universidad Nacional del Altiplano",
+                             "mmamanic@unap.edu.pe", "ORCID") if w in texto]
+    check("formato", "bloque de autoría completo (anónimo simple)",
+          len(presentes) == 4, "presentes: %d de 4" % len(presentes))
 
     corchetes = [p for p in ps if p.strip().startswith("[") and p.strip().endswith("]")]
     check("formato", "sin marcadores de posición entre corchetes", not corchetes,

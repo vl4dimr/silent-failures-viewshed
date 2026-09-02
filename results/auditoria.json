@@ -22,9 +22,9 @@
     },
     {
       "bloque": "formato",
-      "check": "sin correos, filiación ni bloque de autores",
+      "check": "bloque de autoría completo (anónimo simple)",
       "ok": true,
-      "detalle": ""
+      "detalle": "presentes: 4 de 4"
     },
     {
       "bloque": "formato",
@@ -276,7 +276,7 @@
       "bloque": "jcaa",
       "check": "8 500 palabras como máximo, referencias incluidas",
       "ok": true,
-      "detalle": "4352"
+      "detalle": "4439"
     },
     {
       "bloque": "jcaa",
