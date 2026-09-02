@@ -61,6 +61,7 @@ MEC = RESU["mecanismo_recorte"]
 DIAG = RESU["diagnosticos"]
 
 DOI_CASO = "10.5281/zenodo.22176260"
+DOI_ESTE = "10.5281/zenodo.22242923"
 
 
 def f(x, dec=2):
@@ -660,10 +661,16 @@ P("The engine with switchable defects, the benchmark, the mutation harness, the 
   "laboratory, every result file and the scripts that generate the figures and this manuscript "
   "are openly deposited. The software depends only on NumPy (and Matplotlib for figures). The "
   "field study whose defects are reproduced here is likewise openly deposited, including its "
-  "pre-correction runs (doi:%s). A persistent identifier for the present deposit will be minted "
-  "at submission and cited here in the final version." % DOI_CASO)
+  "pre-correction runs (doi:%s). The present deposit is at doi:%s "
+  "(concept identifier, resolving to the latest version)." % (DOI_CASO, DOI_ESTE))
 
 # ================================================================== references
+etiqueta("Declaration of generative AI in the manuscript preparation process", after=3)
+P("During the preparation of this work the author used Claude (Anthropic) to assist in developing "
+  "and testing the analysis code, drafting the manuscript, and generating the figures. The author "
+  "reviewed, verified and edited all output —including through the automated audits deposited with "
+  "the code— and takes full responsibility for the content of this article.", after=10)
+
 etiqueta("References", after=6)
 for ref in [
     "Claessen, K and Hughes, J 2000 QuickCheck: a lightweight tool for random testing of Haskell "

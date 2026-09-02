@@ -84,8 +84,8 @@ P("Data availability", 10.5, True, after=3)
 P("The defect-injectable line-of-sight engine, the benchmark, the mutation "
   "harness, the landscape laboratory, all result files and the scripts that "
   "generate every figure and the manuscript itself are openly deposited under "
-  "an MIT licence; the deposit DOI is cited in the manuscript's Data and code "
-  "availability section. The field study whose defects are reproduced is "
+  "an MIT licence at doi:10.5281/zenodo.22242923 (concept identifier, latest "
+  "version). The field study whose defects are reproduced is "
   "likewise openly deposited, including its pre-correction runs "
   "(doi:%s)." % DOI_CASO, after=10)
 
