@@ -40,6 +40,18 @@ construction with known theoretical power.
 design-level defects (null placements over water; a tightly cropped sampling
 region) and measures calibration, power, and mechanism.
 
+**Two production engines under the same benchmark**
+([scripts/p07_motores_reales.py](scripts/p07_motores_reales.py),
+[scripts/p08_grass_viewshed.py](scripts/p08_grass_viewshed.py),
+[scripts/p09_comparacion_motores.py](scripts/p09_comparacion_motores.py)):
+the 15 terrain cases are materialised as small rasters and submitted through
+`qgis_process` to `gdal_viewshed` (GDAL, QGIS 3.44.13) and `r.viewshed` (GRASS
+8.5.0), each run twice — with this study's parameters and with the values it
+ships with. Both pass 15/15 when configured; at their defaults GDAL fails 4
+(target height 0: blocks the visible) and GRASS fails 3 (no curvature unless
+`-c`: sees the blocked), and they contradict each other on 7 of 15 cases.
+`results/comparacion_motores.json`.
+
 ## Headline results
 
 - The water defect does not create false positives; it **destroys power**. Its
@@ -64,8 +76,12 @@ manuscript). In order:
 python scripts/p01_benchmark.py     # banco + analisis de mutantes  (~2 min)
 python scripts/p02_calibracion.py   # laboratorio de calibracion    (~15 min)
 python scripts/p03_figuras.py       # las tres figuras
-python scripts/p04_manuscript.py    # manuscrito desde los JSON
-python scripts/p05_auditoria.py     # auditoria del manuscrito
+python scripts/p04_manuscript.py    # manuscrito desde los JSON (version JAMT)
+python scripts/p05_auditoria.py     # auditoria del manuscrito contra las normas de Springer
+python scripts/p07_motores_reales.py      # gdal_viewshed via qgis_process (requiere QGIS 3.44)
+python scripts/p08_grass_viewshed.py      # GRASS r.viewshed via qgis_process, con y sin -c
+python scripts/p09_comparacion_motores.py # cruza ambos -> results/comparacion_motores.json
+python scripts/p10_envio_jamt.py          # paquete ENVIO_JAMT/: manuscrito, Fig1..Fig4, carta
 ```
 
 No number in the manuscript is typed by hand: every figure that comes from a
@@ -74,10 +90,26 @@ computation is read from `results/*.json`, and the audit verifies it.
 ## Layout
 
 ```
-scripts/          los_engine, suite, terrain_lab + pipeline p01..p05
-results/          benchmark.json, calibracion.json, auditoria.json, figuras/
+scripts/          los_engine, suite, terrain_lab + pipeline p01..p10
+results/          benchmark.json, calibracion.json, comparacion_motores.json,
+                  motores_reales.json, grass_viewshed.json, auditoria.json, figuras/
 data/caso_titicaca/   the three field-study result files the paper cites
+ENVIO_JAS/        the package submitted to JAS on 2 Sept 2026 (desk-rejected next day)
+ENVIO_JAMT/       the package for Journal of Archaeological Method and Theory
 ```
+
+## Status
+
+Submitted to the Journal of Archaeological Science on 2 September 2026 and
+returned without review the next day. Re-targeted to the Journal of
+Archaeological Method and Theory (Springer, single-blind, no charge via the
+subscription route): manuscript rewritten to the journal's guidelines on
+26 September 2026 — background section on viewshed uncertainty and scientific
+software correctness, production-engine measurement, APA 7 references with DOI
+links, `Fig. n` captions, Statements and Declarations, LLM use documented in
+Methods — 6 229 words of main text, 36 references, 4 figures, 4 tables, 237-word
+abstract. Audit: 60 checks, 0 failures. Before submitting, publish a new Zenodo
+version (v1.1.0) with the engine-comparison scripts and results.
 
 ## Licence
 

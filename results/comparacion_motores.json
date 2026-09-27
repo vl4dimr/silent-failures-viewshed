@@ -1,0 +1,160 @@
+{
+  "banco": "15 casos de terreno con respuesta derivada",
+  "motores": {
+    "GDAL gdal_viewshed": {
+      "version": "QGIS 3.44.13",
+      "correcto": "15/15",
+      "de_fabrica": "11/15",
+      "defecto_de_fabrica": "-tz = 0 (altura del objetivo nula)",
+      "direccion": {
+        "declara_tapado_lo_visible": 4,
+        "declara_visible_lo_tapado": 0
+      }
+    },
+    "GRASS r.viewshed": {
+      "version": "8.5.0",
+      "correcto": "15/15",
+      "de_fabrica": "12/15",
+      "defecto_de_fabrica": "sin -c (curvatura terrestre omitida)",
+      "direccion": {
+        "declara_tapado_lo_visible": 0,
+        "declara_visible_lo_tapado": 3
+      }
+    }
+  },
+  "discrepancia_entre_motores_de_fabrica": {
+    "casos": 7,
+    "de": 15,
+    "detalle": [
+      "barrera rebajada a 1 m a 3 km: no tapa",
+      "barrera de 2 m: no tapa a 3 km",
+      "la misma barrera de 2 m si tapa a 12 km",
+      "mismo caso con objetivo de 30 m: se ve",
+      "plano justo por debajo de la distancia critica (8.8 km): se ve",
+      "plano bien por encima de la critica (18.8 km): la curvatura tapa",
+      "plano a 40 km: mas alla del horizonte geometrico"
+    ]
+  },
+  "detalle": [
+    {
+      "caso": "plano a 3 km: se ve",
+      "esperado": true,
+      "gdal_correcto": true,
+      "gdal_fabrica": true,
+      "grass_correcto": true,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "barrera de 50 m a media distancia: tapa",
+      "esperado": false,
+      "gdal_correcto": false,
+      "gdal_fabrica": false,
+      "grass_correcto": false,
+      "grass_fabrica": false
+    },
+    {
+      "caso": "barrera rebajada a 1 m a 3 km: no tapa",
+      "esperado": true,
+      "gdal_correcto": true,
+      "gdal_fabrica": false,
+      "grass_correcto": true,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "depresion a 3 km: nunca tapa",
+      "esperado": true,
+      "gdal_correcto": true,
+      "gdal_fabrica": true,
+      "grass_correcto": true,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "barrera de 2 m: no tapa a 3 km",
+      "esperado": true,
+      "gdal_correcto": true,
+      "gdal_fabrica": false,
+      "grass_correcto": true,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "la misma barrera de 2 m si tapa a 12 km",
+      "esperado": false,
+      "gdal_correcto": false,
+      "gdal_fabrica": false,
+      "grass_correcto": false,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "barrera de una sola celda a 3 km: tapa igual",
+      "esperado": false,
+      "gdal_correcto": false,
+      "gdal_fabrica": false,
+      "grass_correcto": false,
+      "grass_fabrica": false
+    },
+    {
+      "caso": "objetivo a ras de suelo tras loma de 12 m: no se ve",
+      "esperado": false,
+      "gdal_correcto": false,
+      "gdal_fabrica": false,
+      "grass_correcto": false,
+      "grass_fabrica": false
+    },
+    {
+      "caso": "mismo caso con objetivo de 30 m: se ve",
+      "esperado": true,
+      "gdal_correcto": true,
+      "gdal_fabrica": false,
+      "grass_correcto": true,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "observador sobre una cima: no se tapa a si mismo",
+      "esperado": true,
+      "gdal_correcto": true,
+      "gdal_fabrica": true,
+      "grass_correcto": true,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "objetivo sobre una cima: sigue viendose",
+      "esperado": true,
+      "gdal_correcto": true,
+      "gdal_fabrica": true,
+      "grass_correcto": true,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "plano justo por debajo de la distancia critica (8.8 km): se ve",
+      "esperado": true,
+      "gdal_correcto": true,
+      "gdal_fabrica": false,
+      "grass_correcto": true,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "plano bien por encima de la critica (18.8 km): la curvatura tapa",
+      "esperado": false,
+      "gdal_correcto": false,
+      "gdal_fabrica": false,
+      "grass_correcto": false,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "plano a 40 km: mas alla del horizonte geometrico",
+      "esperado": false,
+      "gdal_correcto": false,
+      "gdal_fabrica": false,
+      "grass_correcto": false,
+      "grass_fabrica": true
+    },
+    {
+      "caso": "plano a 1 km: la curvatura no cambia nada",
+      "esperado": true,
+      "gdal_correcto": true,
+      "gdal_fabrica": true,
+      "grass_correcto": true,
+      "grass_fabrica": true
+    }
+  ]
+}

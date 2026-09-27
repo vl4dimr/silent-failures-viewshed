@@ -1,5 +1,5 @@
 {
-  "ok": 52,
+  "ok": 60,
   "fallos": 0,
   "items": [
     {
@@ -18,7 +18,7 @@
       "bloque": "formato",
       "check": "texto corrido justificado",
       "ok": true,
-      "detalle": "36 de 36"
+      "detalle": "55 de 55"
     },
     {
       "bloque": "formato",
@@ -64,33 +64,39 @@
     },
     {
       "bloque": "figuras",
-      "check": "Figure 1 citada en el texto",
+      "check": "Fig. 1 citada en el texto",
       "ok": true,
       "detalle": ""
     },
     {
       "bloque": "figuras",
-      "check": "Figure 2 citada en el texto",
+      "check": "Fig. 2 citada en el texto",
       "ok": true,
       "detalle": ""
     },
     {
       "bloque": "figuras",
-      "check": "Figure 3 citada en el texto",
+      "check": "Fig. 3 citada en el texto",
       "ok": true,
       "detalle": ""
     },
     {
       "bloque": "figuras",
-      "check": "Figure 4 citada en el texto",
+      "check": "Fig. 4 citada en el texto",
       "ok": true,
       "detalle": ""
     },
     {
       "bloque": "figuras",
-      "check": "cuatro pies de figura",
+      "check": "cuatro pies de figura «Fig. n»",
       "ok": true,
       "detalle": "4"
+    },
+    {
+      "bloque": "figuras",
+      "check": "ningún pie con la forma antigua «Figure n.»",
+      "ok": true,
+      "detalle": ""
     },
     {
       "bloque": "figuras",
@@ -252,7 +258,7 @@
       "bloque": "prosa",
       "check": "toda referencia listada está citada",
       "ok": true,
-      "detalle": "12 referencias"
+      "detalle": "36 referencias"
     },
     {
       "bloque": "prosa",
@@ -262,39 +268,81 @@
     },
     {
       "bloque": "prosa",
-      "check": "toda referencia lleva DOI en forma Ubiquity",
+      "check": "toda referencia con DOI lo lleva como enlace completo",
       "ok": true,
-      "detalle": "12 de 12"
+      "detalle": "35 de 36"
     },
     {
-      "bloque": "jcaa",
-      "check": "resumen de 250 palabras como máximo (JAS)",
+      "bloque": "jamt",
+      "check": "resumen de 150 a 250 palabras",
       "ok": true,
-      "detalle": "250"
+      "detalle": "237"
     },
     {
-      "bloque": "jcaa",
-      "check": "8 500 palabras como máximo, referencias incluidas",
+      "bloque": "jamt",
+      "check": "de 4 a 6 palabras clave",
       "ok": true,
-      "detalle": "4439"
+      "detalle": "6"
     },
     {
-      "bloque": "jcaa",
-      "check": "citas Harvard, sin coma antes del año",
+      "bloque": "jamt",
+      "check": "extensión de artículo de método (6 000 a 12 000 palabras)",
+      "ok": true,
+      "detalle": "7537"
+    },
+    {
+      "bloque": "jamt",
+      "check": "citas APA, con coma antes del año",
       "ok": true,
       "detalle": ""
     },
     {
-      "bloque": "jcaa",
-      "check": "referencias con el año sin paréntesis",
+      "bloque": "jamt",
+      "check": "«&» dentro de las citas parentéticas",
       "ok": true,
       "detalle": ""
     },
     {
-      "bloque": "jcaa",
+      "bloque": "jamt",
+      "check": "referencias con el año entre paréntesis",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
       "check": "encabezados numerados de hasta tres niveles",
       "ok": true,
       "detalle": "profundidades: [1, 2]"
+    },
+    {
+      "bloque": "jamt",
+      "check": "Statements and Declarations completas antes de las referencias",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "uso de modelo de lenguaje documentado en Métodos",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "números",
+      "check": "discrepancia entre motores de fábrica",
+      "ok": true,
+      "detalle": "7 de 15"
+    },
+    {
+      "bloque": "números",
+      "check": "GDAL gdal_viewshed: configurado y de fábrica",
+      "ok": true,
+      "detalle": "15/15 / 11/15"
+    },
+    {
+      "bloque": "números",
+      "check": "GRASS r.viewshed: configurado y de fábrica",
+      "ok": true,
+      "detalle": "15/15 / 12/15"
     },
     {
       "bloque": "fichero",
