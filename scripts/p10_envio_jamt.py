@@ -81,8 +81,8 @@ CARTA = [
     "whose expectations are derived rather than written by hand and whose adequacy is measured by "
     "mutation analysis; a synthetic-landscape laboratory in which the truth is known by "
     "construction, so that what each design defect does to statistical inference is measured "
-    "against an exact expectation; and a measurement of two engines in everyday archaeological "
-    "use, GDAL and GRASS through QGIS, which pass every benchmark case when configured deliberately "
+    "against an exact expectation; and a measurement of two widely used, freely available "
+    "engines, GDAL and GRASS through QGIS, which pass every benchmark case when configured deliberately "
     "and contradict each other on nearly half of them at their shipped defaults. The defect, in "
     "other words, need not be in the code: it can be in the default. Two near-free diagnostics "
     "and a six-point protocol close the paper.",

@@ -20,6 +20,7 @@ Salida: manuscript_silent_failures.docx
 """
 import json
 import math
+import re
 import os
 import sys
 
@@ -190,19 +191,26 @@ def P(t, size=10, bold=False, italic=False, align=WD_ALIGN_PARAGRAPH.JUSTIFY,
     return p
 
 
+def _con_siguiente(p):
+    """Un encabezado nunca se queda solo al pie de una pagina."""
+    p.paragraph_format.keep_with_next = True
+    p.paragraph_format.keep_together = True
+    return p
+
+
 def h1(t):
-    return P(t, 11.5, True, align=WD_ALIGN_PARAGRAPH.LEFT, before=16, after=6,
-             caps=True, track=16)
+    return _con_siguiente(P(t, 11.5, True, align=WD_ALIGN_PARAGRAPH.LEFT, before=16, after=6,
+                            caps=True, track=16))
 
 
 def h2(t):
-    return P(t, 10.5, True, align=WD_ALIGN_PARAGRAPH.LEFT, before=10, after=4,
-             color=TINTA_SUAVE)
+    return _con_siguiente(P(t, 10.5, True, align=WD_ALIGN_PARAGRAPH.LEFT, before=10, after=4,
+                            color=TINTA_SUAVE))
 
 
 def etiqueta(t, after=3):
-    return P(t, 10, True, align=WD_ALIGN_PARAGRAPH.LEFT, after=after,
-             caps=True, track=14, color=TINTA_SUAVE)
+    return _con_siguiente(P(t, 10, True, align=WD_ALIGN_PARAGRAPH.LEFT, after=after,
+                            caps=True, track=14, color=TINTA_SUAVE))
 
 
 def figure(fn, label, caption):
@@ -210,7 +218,9 @@ def figure(fn, label, caption):
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_before = Pt(10)
     p.paragraph_format.space_after = Pt(4)
+    # Springer: 174 mm como maximo a una columna
     p.add_run().add_picture(os.path.join(FIG, fn), width=Mm(155))
+    p.paragraph_format.keep_with_next = True
     q = doc.add_paragraph()
     q.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     q.paragraph_format.space_after = Pt(12)
@@ -226,6 +236,7 @@ def table(label, caption, cols, rows, widths=None):
     q.paragraph_format.line_spacing = 1.1
     run(q, label + " ", 9, bold=True)
     run(q, caption, 9, color=GRIS_PIE)
+    q.paragraph_format.keep_with_next = True
     t = doc.add_table(rows=1 + len(rows), cols=len(cols))
     t.alignment = 1
     for j, c in enumerate(cols):
@@ -242,6 +253,14 @@ def table(label, caption, cols, rows, widths=None):
                                             else WD_ALIGN_PARAGRAPH.CENTER)
             run(cell.paragraphs[0], str(v), 8.5)
             _borde_celda(cell, {"bottom": 12} if i == ultima else {})
+    if widths:
+        # anchos en mm dentro de la caja de 160 mm; Word los respeta solo sin autoajuste
+        assert sum(widths) <= 160, "tabla de %d mm" % sum(widths)
+        t.autofit = False
+        for j, w in enumerate(widths):
+            t.columns[j].width = Mm(w)
+            for fila in t.rows:
+                fila.cells[j].width = Mm(w)
     doc.add_paragraph().paragraph_format.space_after = Pt(2)
 
 
@@ -299,7 +318,7 @@ _borde_parrafo(_regla, "bottom", sz=8, espacio=1)
 # dentro del manuscrito (nombre, filiacion, correo de correspondencia, ORCID).
 P(AUTOR, 11, True, align=WD_ALIGN_PARAGRAPH.CENTER, after=2)
 P(FILIACION, 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, after=2, color=TINTA_SUAVE)
-P("Corresponding author: %s  ·  ORCID https://orcid.org/%s" % (CORREO, ORCID_A),
+P("Corresponding author: %s · ORCID https://orcid.org/%s" % (CORREO, ORCID_A),
   9, align=WD_ALIGN_PARAGRAPH.CENTER, after=16, color=TINTA_SUAVE)
 
 etiqueta("Abstract")
@@ -340,7 +359,7 @@ h1("1. Introduction")
 P("Archaeology has spent a decade building the case for computational reproducibility. The argument "
   "is settled: analyses should ship their code and data, be version-controlled, and re-run from top "
   "to bottom on demand (Marwick, 2017; Peng, 2011; Sandve et al., 2013). The case was made in this "
-  "journal, with a worked example, and it has since reshaped how archaeological science is done and "
+  "journal, with a worked example, and it has since informed how archaeological science is done and "
   "reported (Schmidt & Marwick, 2020). This paper is about what that programme, on its own, cannot "
   "deliver. Re-running an analysis verifies that the code produces the reported numbers; it says "
   "nothing about whether the numbers are right. A pipeline with an inverted sign is perfectly "
@@ -377,7 +396,7 @@ P("Archaeological visibility analysis —a methodological tradition reviewed by 
   "being obviously broken, and Riggs and Dean (2007) traced such disagreements to undeclared "
   "implementation decisions. Reviewers see results, not code, so review does not catch the defect. "
   "Reproduction re-executes the same code, so reproduction does not catch it either. The defect "
-  "passes through every control the discipline currently operates.")
+  "passes through both of the controls on which the discipline currently relies.")
 
 P("A recent intervisibility study of 180 archaeological sites in the Titicaca basin documented "
   "three such defects encountered —and corrected— during its own analysis (Mamani Calisaya et al., "
@@ -397,7 +416,7 @@ P("This paper treats that episode as a specimen and builds the instruments the d
   "line-of-sight engines whose adequacy is itself measured, by mutation analysis, rather than "
   "asserted; (3) a synthetic-landscape laboratory in which the truth is known by construction, so "
   "the damage each design defect does to statistical inference is measured exactly; (4) a "
-  "measurement of two production engines in everyday archaeological use, GDAL and GRASS, against "
+  "measurement of two widely used, freely available production engines, GDAL and GRASS, against "
   "the same benchmark, which shows that the defect need not be in the code at all; and (5) two "
   "diagnostics and a six-point protocol that detect the documented defects at negligible cost, "
   "before any real terrain is touched.")
@@ -425,8 +444,8 @@ P("The response of the archaeological community to this uncertainty has been, in
   "dependence between its edges with exponential random graph models (Brughmans et al., 2015; "
   "Brughmans & Brandes, 2017)— moves the inference to a level where individual lines of sight "
   "matter less. Lake et al. (1998) showed early on that the software itself could be tailored to "
-  "the archaeological question, and Čučković (2016) published the QGIS plug-in through which much "
-  "of the community now computes visibility; Ducke (2012) argued that free and open-source software "
+  "the archaeological question, and Čučković (2016) published a freely available and commonly used "
+  "QGIS plug-in for visibility analysis; Ducke (2012) argued that free and open-source software "
   "is the only route by which an analysis can be audited down to the algorithm. What none of this "
   "work provides is a way to decide whether a given engine, with a given configuration, is correct. "
   "Fisher's disagreement is treated as a property of the operation, when much of it is the "
@@ -459,8 +478,8 @@ P("The third answer measures the tests themselves. A suite that the correct prog
   "1978; Jia & Harman, 2011) answers exactly this by injecting known defects and counting how many "
   "the suite detects, and it carries a subtlety that matters here: some mutations do not change "
   "observable behaviour at all, and a suite must not be blamed for failing to detect what cannot be "
-  "detected. None of these techniques is new to software engineering. What is new is their "
-  "application to a geometric computation in archaeology, and the finding —reported in Section "
+  "detected. None of these techniques is new to software engineering. What this paper adds is "
+  "their application to a geometric computation in archaeology, and the finding —reported in Section "
   "4.2— that the expectations archaeologists write by hand fail at the same rate, and for the same "
   "reasons, as the code they are meant to check.")
 
@@ -478,7 +497,7 @@ P("Two levels must be distinguished, because they demand different instruments. 
   "null model is constructed and where it is allowed to sample. Table 1 lists the seven defects "
   "treated in this paper. Every engine defect is either documented in the field episode or is a "
   "default that mainstream software makes easy —and Section 4.5 shows that two of them are the "
-  "literal defaults of the software most archaeologists run; both design defects are documented.")
+  "literal defaults of two widely used, freely available engines; both design defects are documented.")
 
 table("Table 1.", "The seven defects studied. The first five are injected into the line-of-sight "
       "engine; the last two into the design of the null-model contrast. ‘Documented’ "
@@ -526,7 +545,8 @@ P("The benchmark has two parts. The first is %d terrain cases whose correct answ
   "hand: over a plane, the mid-path bulge D²/8R equals the mean sight-line height "
   "(hₒ+hₜ)/2 at D = %s km for the default heights, and the cases probe both sides of the "
   "derived value. The reason for this discipline appears in Section 4.2." % (N_CASOS, f(D_CRIT_KM, 1)))
-P("The second part is %d behavioural properties checked over hundreds of random rugged terrains: "
+P("The second part is %d behavioural properties, two of them checked over 40 random rugged "
+  "terrains each and two over controlled sweeps of distance and barrier height: "
   "visibility is reciprocal; raising the observer never removes visibility; over a plane, "
   "visibility lost to curvature never returns with further distance; raising a barrier never "
   "unblocks a view. These are metamorphic relations in the sense of Section 2.2 (Chen et al., "
@@ -576,7 +596,7 @@ P("Two checks are computed in every run, neither requiring ground truth. D1: the
 
 h2("3.6. Production engines under the same benchmark")
 P("The instruments above are built around an engine written for this study, which proves that the "
-  "benchmark can detect defects but says nothing about the software archaeology actually runs. "
+  "benchmark can detect defects but says nothing about the production software archaeologists use. "
   "The %d terrain cases were therefore materialised as small georeferenced rasters and submitted, "
   "through the QGIS processing framework, to two production engines: gdal_viewshed, the GDAL "
   "implementation exposed in the QGIS toolbox (QGIS %s), and r.viewshed of GRASS GIS %s. Each "
@@ -616,14 +636,56 @@ P("The reference engine passes all %d tests. Table 2 gives the mutation matrix. 
   "class in one image."
   % (N_TESTS, "{:,}".format(MUT["extremos_incluidos"]["comparaciones_equivalencia"])))
 
+# Los identificadores internos (en espanol) no pueden llegar al manuscrito.
+MUTANTE_EN = {
+    "curvatura_restada": "Curvature subtracted",
+    "sin_curvatura": "Curvature omitted",
+    "altura_objetivo_nula": "Target height zero",
+    "extremos_incluidos": "Endpoints included",
+    "muestreo_grueso": "Coarse profile sampling",
+}
+PRUEBA_EN = {
+    "plano a 3 km: se ve": "plane at 3 km: visible",
+    "barrera de 50 m a media distancia: tapa": "50 m barrier at mid-distance: blocks",
+    "barrera rebajada a 1 m a 3 km: no tapa": "barrier lowered to 1 m at 3 km: does not block",
+    "depresion a 3 km: nunca tapa": "depression at 3 km: never blocks",
+    "barrera de 2 m: no tapa a 3 km": "2 m barrier: does not block at 3 km",
+    "la misma barrera de 2 m si tapa a 12 km": "same 2 m barrier: blocks at 12 km",
+    "barrera de una sola celda a 3 km: tapa igual": "one-cell barrier at 3 km: still blocks",
+    "objetivo a ras de suelo tras loma de 12 m: no se ve":
+        "ground-level target behind 12 m rise: not visible",
+    "mismo caso con objetivo de 30 m: se ve": "same case, 30 m target: visible",
+    "observador sobre una cima: no se tapa a si mismo": "observer on a summit: does not block itself",
+    "objetivo sobre una cima: sigue viendose": "target on a summit: still visible",
+    "plano a 1 km: la curvatura no cambia nada": "plane at 1 km: curvature changes nothing",
+    "plano a 40 km: mas alla del horizonte geometrico": "plane at 40 km: beyond the geometric horizon",
+    "reciprocidad de la vision": "reciprocity of visibility",
+    "monotonia en la altura del observador": "monotonicity in observer height",
+    "monotonia en la distancia sobre plano": "monotonicity in distance over a plane",
+    "monotonia en la altura de la barrera": "monotonicity in barrier height",
+}
+
+
+def prueba_en(nombre):
+    """Traduce el nombre de una prueba; las de distancia critica llevan el km calculado."""
+    m = re.match(r"plano justo por debajo de la distancia critica \(([\d.]+) km\): se ve$", nombre)
+    if m:
+        return "plane just below the critical distance (%s km): visible" % m.group(1)
+    m = re.match(r"plano bien por encima de la critica \(([\d.]+) km\): la curvatura tapa$", nombre)
+    if m:
+        return "plane well beyond the critical distance (%s km): curvature blocks" % m.group(1)
+    return PRUEBA_EN[nombre]      # KeyError si aparece una prueba nueva sin traducir
+
+
 table("Table 2.", "Mutation matrix: for each injected engine defect, how many of the %d benchmark "
       "tests detect it, and the first test to do so." % N_TESTS,
       ["Injected defect", "Detected", "Tests failing", "First failing test"],
-      [[d, ("yes" if MUT[d]["detectado"] else
+      [[MUTANTE_EN[d], ("yes" if MUT[d]["detectado"] else
             ("equivalent" if MUT[d].get("equivalente") else "NO")),
         "%d / %d" % (MUT[d]["pruebas_que_saltan"], N_TESTS),
-        (MUT[d]["cuales"][0] if MUT[d]["cuales"] else "—")]
-       for d in MUT])
+        (prueba_en(MUT[d]["cuales"][0]) if MUT[d]["cuales"] else "—")]
+       for d in MUT],
+      widths=[38, 20, 22, 80])
 
 figure("fig_anatomia.png", "Fig. 2",
        "Anatomy of a silent failure. (a) The correct engine finds this %s km line of sight blocked: "
@@ -731,15 +793,16 @@ h2("4.4. The diagnostics flag both defects")
 P("Across all replicates, %s %% of the defective water-run null placements touched water "
   "(diagnostic D1; the sound design scores zero by construction), and the cropped sampling region "
   "admitted on average %s %% of the 360 orientations against %s %% for the full region "
-  "(diagnostic D2). Neither check needs ground truth, both cost microseconds, and either one "
+  "(diagnostic D2). Neither check needs ground truth, both are computed from placements the "
+  "contrast draws anyway, and either one "
   "prints a number that no analyst would wave through."
   % (pct(DIAG["agua_nulos_que_pisan_media"]), pct(DIAG["cobertura_recorte_S0_media"]),
      pct(DIAG["cobertura_completa_media"])))
 
-h2("4.5. Two engines in everyday use, measured against the same benchmark")
+h2("4.5. Two widely used engines, measured against the same benchmark")
 P("Table 4 gives the outcome of the runs described in Section 3.6. Configured deliberately, both "
   "engines are correct: each passes all %d cases, including the derived curvature thresholds. The "
-  "geometry of widely used software is not the problem. Left at its factory settings, however, "
+  "geometry of these two engines is not the problem. Left at its factory settings, however, "
   "each reproduces a defect from Table 1. GDAL defaults to a target height of zero —the "
   "‘target height zero’ defect, which Table 1 lists as a plausible default and which "
   "turns out to be the literal default— and fails %d of the %d cases, every one of them by "
@@ -751,7 +814,7 @@ P("Table 4 gives the outcome of the runs described in Section 3.6. Configured de
 
 P("The consequence is the quantity Fisher (1993) described but could not attribute. On %d of the "
   "%d cases the two engines, at their defaults, return contradictory verdicts on identical "
-  "terrain: an intervisibility study reaches opposite conclusions depending on which QGIS menu "
+  "terrain: an intervisibility study can reach opposite conclusions depending on which QGIS menu "
   "entry the analyst chose, and nothing in either output marks the disagreement. The defects "
   "are not in the code, which is correct in both; they are in the defaults, which are silent. "
   "This is also why a benchmark is the right instrument: it is the only one of the controls "
@@ -767,8 +830,8 @@ table("Table 4.",
       [["GDAL gdal_viewshed (%s)" % _G["version"], _G["correcto"], _G["de_fabrica"],
         "target height = 0", "blocks the visible"],
        ["GRASS r.viewshed %s" % _R["version"], _R["correcto"], _R["de_fabrica"],
-        "curvature off unless -c", "sees the blocked"]],
-      widths=[58, 22, 22, 40, 34])
+        "curvature off unless ‑c", "sees the blocked"]],
+      widths=[44, 20, 20, 44, 32])
 
 # ================================================================== discussion
 h1("5. Discussion")
@@ -819,8 +882,8 @@ P("There is a theoretical corollary for how methods are argued in archaeology. M
   "that response is right for the uncertainty that comes from the data. It is the wrong response "
   "for the uncertainty that comes from defects, because a defect is not a distribution to be "
   "propagated but a mistake to be found, and propagating it only lends it the authority of an "
-  "error bar. The two kinds of uncertainty demand different instruments, and the discipline has so "
-  "far built only the first.")
+  "error bar. The two kinds of uncertainty demand different instruments, and the literature "
+  "reviewed here has so far concentrated on the first.")
 
 h2("5.3. Implications for visibility studies")
 P("For the practising analyst the results reduce to a short list of things a visibility paper "
@@ -833,7 +896,7 @@ P("For the practising analyst the results reduce to a short list of things a vis
   "results at archaeological ranges; this paper shows that whether they are applied at all can "
   "depend on a flag the analyst never saw. The plug-in of Čučković (2016) and the network methods "
   "of Brughmans et al. (2015) are only as sound as the lines of sight beneath them, and the "
-  "benchmark deposited here can be run against either in minutes.")
+  "benchmark deposited here is the instrument with which the engines beneath them can be checked.")
 P("The results also bear on how the field's null models are designed. Lake and Woodman (2003) and "
   "Wheatley and Gillings (2000) settled which comparison a visibility study should make; the "
   "laboratory shows that even the right comparison fails silently if the null is allowed to sample "
@@ -861,20 +924,20 @@ P("The natural extension is horizontal: the same defect-injection methodology ap
   "archaeology computes on rasters —least-cost paths, hydrological modelling, predictive "
   "modelling— and each domain has its own silent defaults awaiting a benchmark. A second "
   "extension is comparative: Section 4.5 measured two engines at two configurations, and the same "
-  "harness can be pointed at every published viewshed implementation, turning Fisher's (1993) "
+  "harness can be pointed at other published viewshed implementations, turning Fisher's (1993) "
   "observation of inter-implementation disagreement into a standing, attributable measurement "
   "that is updated with each release.")
 
 # ================================================================= conclusions
 h1("6. Conclusions")
 P("A reproducible analysis reproduces its errors. This paper has shown, for archaeological "
-  "visibility analysis, that a class of defects exists which no current control catches: they "
+  "visibility analysis, that a class of defects exists which neither review nor re-execution catches: they "
   "raise no error, return plausible output, survive review and re-execution, and decide the "
   "conclusion of the study that contains them. Three were documented in the field; seven are "
   "reproduced here. Against them the paper offers a benchmark whose expectations are derived and "
   "whose adequacy is measured, a laboratory in which the truth is known by construction, two "
-  "diagnostics that cost nothing, and the finding that two of the engines archaeologists use every "
-  "day are correct when configured and contradictory when not. The practices that follow are cheap "
+  "diagnostics that cost almost nothing, and the finding that two widely used, freely available "
+  "engines are correct when configured and contradictory when not. The practices that follow are cheap "
   "and the code that implements them is deposited. What they add to the reproducibility programme "
   "is the one guarantee that programme cannot give: that what is being reproduced is right.")
 

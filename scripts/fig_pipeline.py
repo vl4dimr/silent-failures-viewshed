@@ -85,7 +85,7 @@ def dibujar(base):
     etapa(ax, XL, Y2, "Benchmark",
           [("15 terrain cases, expectations derived", GRIS),
            ("from the critical distance, not intuition", GRIS),
-           ("4 behavioural properties on random terrain", GRIS)])
+           ("4 behavioural properties, metamorphic", GRIS)])
     etapa(ax, XL, Y3, "Mutation analysis",
           [("the whole benchmark, run against", GRIS),
            ("each deliberately broken engine", GRIS)])
