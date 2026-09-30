@@ -52,6 +52,8 @@ from los_engine import line_of_sight
 
 RES = 30.0          # tamano de celda, m
 MARGEN_BORDE = 5    # celdas de resguardo en el borde del mapa
+N_SITIOS = 32       # sitios de la nube sintetica (forma_alargada)
+PASOS_ORIENTACION = 360  # orientaciones que prueba el diagnostico D2, una por grado
 
 
 # ------------------------------------------------------------------- el paisaje
@@ -108,7 +110,7 @@ def paisaje(n=380, semilla=0, cota=3800.0, con_lago=True):
 
 
 # ------------------------------------------------------- configuracion de sitios
-def forma_alargada(rng, n_sitios=32, largo=250.0, ancho=18.0):
+def forma_alargada(rng, n_sitios=N_SITIOS, largo=250.0, ancho=18.0):
     """Nube de sitios alargada, en celdas, centrada en su media.
 
     La elongacion no es un capricho: los conjuntos reales siguen corredores del
@@ -202,7 +204,7 @@ def contraste(d_obs, dens_nulas):
 
 
 # ------------------------------------------------------------------ diagnosticos
-def cobertura_orientaciones(dem, dc, dr, region=None, pasos=360):
+def cobertura_orientaciones(dem, dc, dr, region=None, pasos=PASOS_ORIENTACION):
     """Diagnostico D2: fraccion de orientaciones que caben en la region.
 
     Es geometria pura y cuesta nada. En el caso real habria marcado 244/360

@@ -1,5 +1,5 @@
 {
-  "ok": 60,
+  "ok": 107,
   "fallos": 0,
   "items": [
     {
@@ -18,7 +18,7 @@
       "bloque": "formato",
       "check": "texto corrido justificado",
       "ok": true,
-      "detalle": "55 de 55"
+      "detalle": "62 de 62"
     },
     {
       "bloque": "formato",
@@ -33,28 +33,58 @@
       "detalle": ""
     },
     {
+      "bloque": "formato",
+      "check": "encabezados numerados sin punto final (plantilla Springer)",
+      "ok": true,
+      "detalle": "24 encabezados"
+    },
+    {
       "bloque": "figuras",
       "check": "fig_pipeline.png: resolución",
       "ok": true,
-      "detalle": "1890x1425 px, 299 dpi"
+      "detalle": "1848x1488 px, 299 dpi"
+    },
+    {
+      "bloque": "figuras",
+      "check": "fig_pipeline.png: existe en PDF vectorial",
+      "ok": true,
+      "detalle": ""
     },
     {
       "bloque": "figuras",
       "check": "fig_anatomia.png: resolución",
       "ok": true,
-      "detalle": "1830x1470 px, 299 dpi"
+      "detalle": "1830x1575 px, 299 dpi"
+    },
+    {
+      "bloque": "figuras",
+      "check": "fig_anatomia.png: existe en PDF vectorial",
+      "ok": true,
+      "detalle": ""
     },
     {
       "bloque": "figuras",
       "check": "fig_laboratorio.png: resolución",
       "ok": true,
-      "detalle": "1822x1404 px, 299 dpi"
+      "detalle": "1830x1215 px, 299 dpi"
+    },
+    {
+      "bloque": "figuras",
+      "check": "fig_laboratorio.png: existe en PDF vectorial",
+      "ok": true,
+      "detalle": ""
     },
     {
       "bloque": "figuras",
       "check": "fig_consecuencias.png: resolución",
       "ok": true,
-      "detalle": "1830x750 px, 299 dpi"
+      "detalle": "1830x885 px, 299 dpi"
+    },
+    {
+      "bloque": "figuras",
+      "check": "fig_consecuencias.png: existe en PDF vectorial",
+      "ok": true,
+      "detalle": ""
     },
     {
       "bloque": "figuras",
@@ -64,147 +94,201 @@
     },
     {
       "bloque": "figuras",
-      "check": "Fig. 1 citada en el texto",
+      "check": "Fig. 1 incrustada dentro de 174 x 234 mm",
       "ok": true,
-      "detalle": ""
+      "detalle": "145.0 x 116.8 mm"
     },
     {
       "bloque": "figuras",
-      "check": "Fig. 2 citada en el texto",
+      "check": "Fig. 2 incrustada dentro de 174 x 234 mm",
       "ok": true,
-      "detalle": ""
+      "detalle": "140.0 x 120.5 mm"
     },
     {
       "bloque": "figuras",
-      "check": "Fig. 3 citada en el texto",
+      "check": "Fig. 3 incrustada dentro de 174 x 234 mm",
       "ok": true,
-      "detalle": ""
+      "detalle": "155.0 x 102.9 mm"
     },
     {
       "bloque": "figuras",
-      "check": "Fig. 4 citada en el texto",
+      "check": "Fig. 4 incrustada dentro de 174 x 234 mm",
       "ok": true,
-      "detalle": ""
+      "detalle": "155.0 x 75.0 mm"
     },
     {
       "bloque": "figuras",
-      "check": "cuatro pies de figura «Fig. n»",
+      "check": "cuatro pies «Fig. n»",
       "ok": true,
       "detalle": "4"
     },
     {
       "bloque": "figuras",
-      "check": "ningún pie con la forma antigua «Figure n.»",
+      "check": "pies de figura sin puntuación final",
       "ok": true,
       "detalle": ""
     },
     {
       "bloque": "figuras",
-      "check": "Table 1 citada en el texto",
+      "check": "pies de figura sin referencias al color (impresión en B/N)",
       "ok": true,
       "detalle": ""
     },
     {
       "bloque": "figuras",
-      "check": "Table 2 citada en el texto",
+      "check": "figuras citadas por primera vez en orden 1, 2, 3, 4",
       "ok": true,
-      "detalle": ""
+      "detalle": "orden: ['1', '2', '3', '4']"
     },
     {
       "bloque": "figuras",
-      "check": "Table 3 citada en el texto",
+      "check": "tablas citadas por primera vez en orden consecutivo",
       "ok": true,
-      "detalle": ""
+      "detalle": "orden: ['1', '2', '3', '4', '5', '6']"
+    },
+    {
+      "bloque": "figuras",
+      "check": "un rótulo «Table n» por tabla",
+      "ok": true,
+      "detalle": "6 / 6"
     },
     {
       "bloque": "números",
-      "check": "total de pruebas del banco",
+      "check": "pruebas, casos y propiedades del banco",
       "ok": true,
-      "detalle": "19"
+      "detalle": "19 = 15 + 4"
     },
     {
       "bloque": "números",
-      "check": "casos y propiedades",
+      "check": "casos decisivos y controles",
       "ok": true,
-      "detalle": "15 + 4"
+      "detalle": "7 + 8"
     },
     {
       "bloque": "números",
-      "check": "distancia crítica derivada",
+      "check": "evaluaciones de las propiedades",
       "ok": true,
-      "detalle": "11.7 km"
+      "detalle": "880"
     },
     {
       "bloque": "números",
-      "check": "comparaciones del barrido de equivalencia",
+      "check": "distancia crítica exacta y la aproximada de la v1",
+      "ok": true,
+      "detalle": "11.6 / 11.7 km"
+    },
+    {
+      "bloque": "números",
+      "check": "celda del banco",
+      "ok": true,
+      "detalle": "30 m"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla de casos: distancia, alturas y papel de cada caso",
+      "ok": true,
+      "detalle": "15 filas"
+    },
+    {
+      "bloque": "números",
+      "check": "barrido de equivalencia",
       "ok": true,
       "detalle": "5,888"
     },
     {
       "bloque": "números",
-      "check": "matriz de mutantes: curvatura_restada",
+      "check": "contraejemplo con altura negativa",
       "ok": true,
-      "detalle": "3 / 19"
+      "detalle": "h_obs = −1"
     },
     {
       "bloque": "números",
-      "check": "matriz de mutantes: sin_curvatura",
+      "check": "matriz de mutantes: curvatura_restada (casos, propiedades, v1)",
       "ok": true,
-      "detalle": "3 / 19"
+      "detalle": "3/15 · 1/4 · 0/4"
     },
     {
       "bloque": "números",
-      "check": "matriz de mutantes: altura_objetivo_nula",
+      "check": "matriz de mutantes: sin_curvatura (casos, propiedades, v1)",
       "ok": true,
-      "detalle": "4 / 19"
+      "detalle": "3/15 · 1/4 · 0/4"
     },
     {
       "bloque": "números",
-      "check": "matriz de mutantes: extremos_incluidos",
+      "check": "matriz de mutantes: altura_objetivo_nula (casos, propiedades, v1)",
       "ok": true,
-      "detalle": "0 / 19"
+      "detalle": "4/15 · 3/4 · 0/4"
     },
     {
       "bloque": "números",
-      "check": "matriz de mutantes: muestreo_grueso",
+      "check": "matriz de mutantes: extremos_incluidos (casos, propiedades, v1)",
       "ok": true,
-      "detalle": "1 / 19"
+      "detalle": "0/15 · 0/4 · 0/4"
     },
     {
       "bloque": "números",
-      "check": "tabla 3: z de S0/correcto",
+      "check": "matriz de mutantes: muestreo_grueso (casos, propiedades, v1)",
       "ok": true,
-      "detalle": "-0.03 (0.89)"
+      "detalle": "4/15 · 1/4 · 0/4"
     },
     {
       "bloque": "números",
-      "check": "tabla 3: z de S0/agua",
+      "check": "propiedades v1: ningún mutante detectado",
       "ok": true,
-      "detalle": "-0.40 (0.58)"
+      "detalle": "0 de 5"
     },
     {
       "bloque": "números",
-      "check": "tabla 3: z de S0/recorte",
+      "check": "todo mutante no equivalente muere por caso y por propiedad",
       "ok": true,
-      "detalle": "-0.04 (0.87)"
+      "detalle": ""
     },
     {
       "bloque": "números",
-      "check": "tabla 3: z de S1/correcto",
+      "check": "distancias a las que se trasladaron los casos",
+      "ok": true,
+      "detalle": "6, 9, 4 km"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla de calibración: z de S0/correcto",
+      "ok": true,
+      "detalle": "−0.03 (0.89)"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla de calibración: z de S0/agua",
+      "ok": true,
+      "detalle": "−0.40 (0.58)"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla de calibración: z de S0/recorte",
+      "ok": true,
+      "detalle": "−0.04 (0.87)"
+    },
+    {
+      "bloque": "números",
+      "check": "tabla de calibración: z de S1/correcto",
       "ok": true,
       "detalle": "3.17 (1.02)"
     },
     {
       "bloque": "números",
-      "check": "tabla 3: z de S1/agua",
+      "check": "tabla de calibración: z de S1/agua",
       "ok": true,
       "detalle": "1.62 (0.75)"
     },
     {
       "bloque": "números",
-      "check": "tabla 3: z de S1/recorte",
+      "check": "tabla de calibración: z de S1/recorte",
       "ok": true,
       "detalle": "1.98 (1.08)"
+    },
+    {
+      "bloque": "números",
+      "check": "rechazo bajo S0 e intervalo de Wilson",
+      "ok": true,
+      "detalle": "1.7 % (95 % confidence interval, CI, 0.3–8.9 %"
     },
     {
       "bloque": "números",
@@ -214,15 +298,33 @@
     },
     {
       "bloque": "números",
-      "check": "rho de Spearman del mecanismo",
+      "check": "rho de Spearman y desplazamiento medio del recorte",
       "ok": true,
-      "detalle": "-0.49"
+      "detalle": "−0.49"
     },
     {
       "bloque": "números",
-      "check": "cobertura del recorte (D2)",
+      "check": "diagnósticos D1 y D2",
       "ok": true,
-      "detalle": "35 %"
+      "detalle": "70 % / 35 %"
+    },
+    {
+      "bloque": "números",
+      "check": "réplicas y colocaciones nulas del laboratorio",
+      "ok": true,
+      "detalle": "60, 199"
+    },
+    {
+      "bloque": "números",
+      "check": "sitios de la nube sintética y orientaciones de D2",
+      "ok": true,
+      "detalle": "32 sitios, 360 orientaciones"
+    },
+    {
+      "bloque": "números",
+      "check": "ruido de Monte Carlo 1/√N",
+      "ok": true,
+      "detalle": "0.07"
     },
     {
       "bloque": "números",
@@ -234,7 +336,7 @@
       "bloque": "números",
       "check": "z del agua sin enmascarar",
       "ok": true,
-      "detalle": "-0.08"
+      "detalle": "−0.08"
     },
     {
       "bloque": "números",
@@ -244,21 +346,123 @@
     },
     {
       "bloque": "números",
-      "check": "distancia de la figura 1",
+      "check": "fracción de agua del área corregida (contraste sin máscara)",
+      "ok": true,
+      "detalle": "27.5 %"
+    },
+    {
+      "bloque": "números",
+      "check": "fracción de agua del recorte",
+      "ok": true,
+      "detalle": "30.6 %"
+    },
+    {
+      "bloque": "números",
+      "check": "sitios del estudio de campo",
+      "ok": true,
+      "detalle": "180"
+    },
+    {
+      "bloque": "números",
+      "check": "orientaciones del recorte, declaradas como cifra del estudio de campo",
+      "ok": true,
+      "detalle": "244/360 (README_origen.txt)"
+    },
+    {
+      "bloque": "números",
+      "check": "distancia de la figura 2",
       "ok": true,
       "detalle": "21.0 km"
     },
     {
       "bloque": "números",
-      "check": "réplicas y nulos del laboratorio",
+      "check": "gdal_viewshed: configurado, de fábrica y dirección",
       "ok": true,
-      "detalle": "60, 199"
+      "detalle": "15/15 · 11/15 · 4 · 0"
+    },
+    {
+      "bloque": "números",
+      "check": "r.viewshed: configurado, de fábrica y dirección",
+      "ok": true,
+      "detalle": "15/15 · 10/15 · 3 · 2"
+    },
+    {
+      "bloque": "números",
+      "check": "atribución de cada fallo a un valor de fábrica",
+      "ok": true,
+      "detalle": "target: 15/15; observer: 11/15; curvature: 11/15 | target: 12/15; observer: 10/15; curvature and refraction: 11/15"
+    },
+    {
+      "bloque": "números",
+      "check": "texto: -tz sola recupera todos los casos de GDAL",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "números",
+      "check": "discrepancias y errores compartidos entre motores de fábrica",
+      "ok": true,
+      "detalle": "discrepan 3, error común 3, ambos bien 9"
+    },
+    {
+      "bloque": "números",
+      "check": "comprobación de la bandera -r de r.viewshed",
+      "ok": true,
+      "detalle": "10.50–11.01 frente a 11.49–11.70 km"
+    },
+    {
+      "bloque": "números",
+      "check": "versiones de GDAL y GRASS",
+      "ok": true,
+      "detalle": "3.13.2 / 8.5.0"
+    },
+    {
+      "bloque": "números",
+      "check": "ninguna de esas cifras está tecleada en p04",
+      "ok": true,
+      "detalle": "15 cifras vigiladas"
     },
     {
       "bloque": "prosa",
-      "check": "toda referencia listada está citada",
+      "check": "toda referencia listada está citada (apellido y año)",
       "ok": true,
-      "detalle": "36 referencias"
+      "detalle": "49 referencias"
+    },
+    {
+      "bloque": "prosa",
+      "check": "lista de referencias en orden alfabético",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "prosa",
+      "check": "toda referencia lleva en cursiva revista, libro o programa",
+      "ok": true,
+      "detalle": "49"
+    },
+    {
+      "bloque": "prosa",
+      "check": "ningún asterisco de marcado llega al documento",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "prosa",
+      "check": "toda referencia con DOI lo lleva como enlace completo",
+      "ok": true,
+      "detalle": "48 de 49"
+    },
+    {
+      "bloque": "prosa",
+      "check": "depósito del estudio de campo citado en su versión con DOI de versión",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "prosa",
+      "check": "depósito propio en la lista y en la disponibilidad de datos",
+      "ok": true,
+      "detalle": ""
     },
     {
       "bloque": "prosa",
@@ -268,15 +472,111 @@
     },
     {
       "bloque": "prosa",
-      "check": "toda referencia con DOI lo lleva como enlace completo",
+      "check": "sin rayas (—) en el cuerpo",
       "ok": true,
-      "detalle": "35 de 36"
+      "detalle": "0"
+    },
+    {
+      "bloque": "prosa",
+      "check": "sin apóstrofos rectos",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "prosa",
+      "check": "negativos con signo menos (U+2212)",
+      "ok": true,
+      "detalle": "0"
+    },
+    {
+      "bloque": "prosa",
+      "check": "sin frases retiradas por los informes",
+      "ok": true,
+      "detalle": "22 vigiladas"
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla GIS definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla DEM definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla KS definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla CI definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla CDF definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla GDAL definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla GRASS definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla QGIS definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla LLM definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "sigla SD definida en su primera mención",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "bloque": "jamt",
+      "check": "ninguna otra sigla sin definir en el cuerpo",
+      "ok": true,
+      "detalle": ""
     },
     {
       "bloque": "jamt",
       "check": "resumen de 150 a 250 palabras",
       "ok": true,
-      "detalle": "237"
+      "detalle": "247"
+    },
+    {
+      "bloque": "jamt",
+      "check": "resumen sin siglas",
+      "ok": true,
+      "detalle": "[]"
+    },
+    {
+      "bloque": "jamt",
+      "check": "resumen sin referencias",
+      "ok": true,
+      "detalle": ""
     },
     {
       "bloque": "jamt",
@@ -288,7 +588,7 @@
       "bloque": "jamt",
       "check": "extensión de artículo de método (6 000 a 12 000 palabras)",
       "ok": true,
-      "detalle": "7567"
+      "detalle": "10937"
     },
     {
       "bloque": "jamt",
@@ -312,7 +612,7 @@
       "bloque": "jamt",
       "check": "encabezados numerados de hasta tres niveles",
       "ok": true,
-      "detalle": "profundidades: [1, 2]"
+      "detalle": "profundidades: [0, 1]"
     },
     {
       "bloque": "jamt",
@@ -327,26 +627,8 @@
       "detalle": ""
     },
     {
-      "bloque": "números",
-      "check": "discrepancia entre motores de fábrica",
-      "ok": true,
-      "detalle": "7 de 15"
-    },
-    {
-      "bloque": "números",
-      "check": "GDAL gdal_viewshed: configurado y de fábrica",
-      "ok": true,
-      "detalle": "15/15 / 11/15"
-    },
-    {
-      "bloque": "números",
-      "check": "GRASS r.viewshed: configurado y de fábrica",
-      "ok": true,
-      "detalle": "15/15 / 12/15"
-    },
-    {
       "bloque": "fichero",
-      "check": "sin autor ni rastro del generador",
+      "check": "sin autor ni rastro del generador en los metadatos",
       "ok": true,
       "detalle": ""
     },
@@ -360,7 +642,7 @@
       "bloque": "fichero",
       "check": "fecha de creación verosímil",
       "ok": true,
-      "detalle": "2026"
+      "detalle": ""
     }
   ]
 }

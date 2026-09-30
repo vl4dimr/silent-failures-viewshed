@@ -5,159 +5,645 @@
         "prueba": "plano a 3 km: se ve",
         "esperado": true,
         "obtenido": true,
-        "pasa": true
+        "pasa": true,
+        "tipo": "control",
+        "rasgo": "curvatura a 3 km",
+        "terreno": "plano",
+        "distancia_km": 3.0,
+        "celdas": 100,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 0.0,
+        "ancho_rasgo_celdas": 0,
+        "posicion_rasgo_km": null,
+        "abultamiento_medio_m": 0.1536258044263067,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": true,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": false,
+        "comprobacion_rasgo_ok": true
       },
       {
-        "prueba": "barrera de 50 m a media distancia: tapa",
+        "prueba": "barrera de 50 m a 6 km: tapa",
         "esperado": false,
         "obtenido": false,
-        "pasa": true
+        "pasa": true,
+        "tipo": "rasgo",
+        "rasgo": "barrera de 50 m",
+        "terreno": "barrera",
+        "distancia_km": 5.97,
+        "celdas": 199,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 50.0,
+        "ancho_rasgo_celdas": 1,
+        "posicion_rasgo_km": 3.0,
+        "abultamiento_medio_m": 0.6083735481086172,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": false,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": true,
+        "comprobacion_rasgo_ok": true
       },
       {
         "prueba": "barrera rebajada a 1 m a 3 km: no tapa",
         "esperado": true,
         "obtenido": true,
-        "pasa": true
+        "pasa": true,
+        "tipo": "control",
+        "rasgo": "barrera de 1 m",
+        "terreno": "barrera",
+        "distancia_km": 2.97,
+        "celdas": 99,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 1.0,
+        "ancho_rasgo_celdas": 1,
+        "posicion_rasgo_km": 1.5,
+        "abultamiento_medio_m": 0.1505686509182232,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": true,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": false,
+        "comprobacion_rasgo_ok": true
       },
       {
         "prueba": "depresion a 3 km: nunca tapa",
         "esperado": true,
         "obtenido": true,
-        "pasa": true
+        "pasa": true,
+        "tipo": "control",
+        "rasgo": "depresion de 80 m",
+        "terreno": "depresion",
+        "distancia_km": 2.97,
+        "celdas": 99,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": -80.0,
+        "ancho_rasgo_celdas": 10,
+        "posicion_rasgo_km": 1.35,
+        "abultamiento_medio_m": 0.1505686509182232,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": true,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": false,
+        "comprobacion_rasgo_ok": true
       },
       {
         "prueba": "barrera de 2 m: no tapa a 3 km",
         "esperado": true,
         "obtenido": true,
-        "pasa": true
+        "pasa": true,
+        "tipo": "control",
+        "rasgo": "barrera de 2 m",
+        "terreno": "barrera",
+        "distancia_km": 2.97,
+        "celdas": 99,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 2.0,
+        "ancho_rasgo_celdas": 1,
+        "posicion_rasgo_km": 1.5,
+        "abultamiento_medio_m": 0.1505686509182232,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": true,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": false,
+        "comprobacion_rasgo_ok": true
       },
       {
-        "prueba": "la misma barrera de 2 m si tapa a 12 km",
+        "prueba": "la misma barrera de 2 m si tapa a 9 km",
         "esperado": false,
         "obtenido": false,
-        "pasa": true
+        "pasa": true,
+        "tipo": "rasgo",
+        "rasgo": "barrera de 2 m",
+        "terreno": "barrera",
+        "distancia_km": 8.97,
+        "celdas": 299,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 2.0,
+        "ancho_rasgo_celdas": 1,
+        "posicion_rasgo_km": 4.5,
+        "abultamiento_medio_m": 1.3734300541516244,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": false,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": true,
+        "comprobacion_rasgo_ok": true
       },
       {
         "prueba": "barrera de una sola celda a 3 km: tapa igual",
         "esperado": false,
         "obtenido": false,
-        "pasa": true
+        "pasa": true,
+        "tipo": "rasgo",
+        "rasgo": "barrera de 80 m y una celda",
+        "terreno": "barrera",
+        "distancia_km": 2.97,
+        "celdas": 99,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 80.0,
+        "ancho_rasgo_celdas": 1,
+        "posicion_rasgo_km": 1.5,
+        "abultamiento_medio_m": 0.1505686509182232,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": false,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": true,
+        "comprobacion_rasgo_ok": true
       },
       {
-        "prueba": "objetivo a ras de suelo tras loma de 12 m: no se ve",
+        "prueba": "objetivo a ras de suelo tras loma de 12 m a 4 km: no se ve",
         "esperado": false,
         "obtenido": false,
-        "pasa": true
+        "pasa": true,
+        "tipo": "rasgo",
+        "rasgo": "loma de 12 m",
+        "terreno": "barrera",
+        "distancia_km": 3.99,
+        "celdas": 133,
+        "h_obs": 1.7,
+        "h_tgt": 0.0,
+        "altura_rasgo_m": 12.0,
+        "ancho_rasgo_celdas": 1,
+        "posicion_rasgo_km": 2.01,
+        "abultamiento_medio_m": 0.27174868544969394,
+        "altura_linea_medio_m": 0.85,
+        "distancia_critica_km": 4.989805699577913,
+        "veredicto_con_rasgo": false,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": true,
+        "comprobacion_rasgo_ok": true
       },
       {
         "prueba": "mismo caso con objetivo de 30 m: se ve",
         "esperado": true,
         "obtenido": true,
-        "pasa": true
+        "pasa": true,
+        "tipo": "rasgo",
+        "rasgo": "objetivo de 30 m",
+        "terreno": "barrera",
+        "distancia_km": 3.99,
+        "celdas": 133,
+        "h_obs": 1.7,
+        "h_tgt": 30.0,
+        "altura_rasgo_m": 12.0,
+        "ancho_rasgo_celdas": 1,
+        "posicion_rasgo_km": 2.01,
+        "abultamiento_medio_m": 0.27174868544969394,
+        "altura_linea_medio_m": 15.85,
+        "distancia_critica_km": 25.951182332443125,
+        "veredicto_con_rasgo": true,
+        "veredicto_sin_rasgo": false,
+        "rasgo_decide": true,
+        "comprobacion_rasgo_ok": true
       },
       {
         "prueba": "observador sobre una cima: no se tapa a si mismo",
         "esperado": true,
         "obtenido": true,
-        "pasa": true
+        "pasa": true,
+        "tipo": "control",
+        "rasgo": "cima de 40 m bajo el observador",
+        "terreno": "cima",
+        "distancia_km": 5.97,
+        "celdas": 199,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 40.0,
+        "ancho_rasgo_celdas": 1,
+        "posicion_rasgo_km": 0.0,
+        "abultamiento_medio_m": 0.6083735481086172,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": true,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": false,
+        "comprobacion_rasgo_ok": true
       },
       {
         "prueba": "objetivo sobre una cima: sigue viendose",
         "esperado": true,
         "obtenido": true,
-        "pasa": true
+        "pasa": true,
+        "tipo": "control",
+        "rasgo": "cima de 40 m bajo el objetivo",
+        "terreno": "cima",
+        "distancia_km": 5.97,
+        "celdas": 199,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 40.0,
+        "ancho_rasgo_celdas": 1,
+        "posicion_rasgo_km": 5.97,
+        "abultamiento_medio_m": 0.6083735481086172,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": true,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": false,
+        "comprobacion_rasgo_ok": true
       },
       {
-        "prueba": "plano justo por debajo de la distancia critica (8.8 km): se ve",
+        "prueba": "plano justo por debajo de la distancia critica (8.7 km): se ve",
         "esperado": true,
         "obtenido": true,
-        "pasa": true
+        "pasa": true,
+        "tipo": "control",
+        "rasgo": "curvatura por debajo de la distancia critica",
+        "terreno": "plano",
+        "distancia_km": 8.7,
+        "celdas": 290,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 0.0,
+        "ancho_rasgo_celdas": 0,
+        "posicion_rasgo_km": null,
+        "abultamiento_medio_m": 1.2919930152252395,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": true,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": false,
+        "comprobacion_rasgo_ok": true
       },
       {
-        "prueba": "plano bien por encima de la critica (18.8 km): la curvatura tapa",
+        "prueba": "plano bien por encima de la critica (18.6 km): la curvatura tapa",
         "esperado": false,
         "obtenido": false,
-        "pasa": true
+        "pasa": true,
+        "tipo": "rasgo",
+        "rasgo": "curvatura por encima de la distancia critica",
+        "terreno": "plano",
+        "distancia_km": 18.57,
+        "celdas": 619,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 0.0,
+        "ancho_rasgo_celdas": 0,
+        "posicion_rasgo_km": null,
+        "abultamiento_medio_m": 5.88634168497881,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": false,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": true,
+        "comprobacion_rasgo_ok": true
       },
       {
         "prueba": "plano a 40 km: mas alla del horizonte geometrico",
         "esperado": false,
         "obtenido": false,
-        "pasa": true
+        "pasa": true,
+        "tipo": "rasgo",
+        "rasgo": "curvatura a 40 km",
+        "terreno": "plano",
+        "distancia_km": 39.99,
+        "celdas": 1333,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 0.0,
+        "ancho_rasgo_celdas": 0,
+        "posicion_rasgo_km": null,
+        "abultamiento_medio_m": 27.29760020012557,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": false,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": true,
+        "comprobacion_rasgo_ok": true
       },
       {
         "prueba": "plano a 1 km: la curvatura no cambia nada",
         "esperado": true,
         "obtenido": true,
-        "pasa": true
+        "pasa": true,
+        "tipo": "control",
+        "rasgo": "curvatura a 1 km",
+        "terreno": "plano",
+        "distancia_km": 0.99,
+        "celdas": 33,
+        "h_obs": 1.7,
+        "h_tgt": 3.0,
+        "altura_rasgo_m": 0.0,
+        "ancho_rasgo_celdas": 0,
+        "posicion_rasgo_km": null,
+        "abultamiento_medio_m": 0.0167298501020248,
+        "altura_linea_medio_m": 2.35,
+        "distancia_critica_km": 11.618375004826426,
+        "veredicto_con_rasgo": true,
+        "veredicto_sin_rasgo": true,
+        "rasgo_decide": false,
+        "comprobacion_rasgo_ok": true
       }
     ],
     "propiedades": [
       {
-        "prueba": "reciprocidad de la vision",
+        "prueba": "reciprocidad con alturas intercambiadas",
+        "violaciones": 0,
+        "comprobaciones": 480,
+        "pasa": true
+      },
+      {
+        "prueba": "obstaculo dominante en cualquier celda interior",
+        "violaciones": 0,
+        "comprobaciones": 120,
+        "pasa": true
+      },
+      {
+        "prueba": "distancia critica derivada sobre plano",
+        "violaciones": 0,
+        "comprobaciones": 120,
+        "pasa": true
+      },
+      {
+        "prueba": "alturas: subir nunca quita vista y basta para ver",
         "violaciones": 0,
         "comprobaciones": 160,
-        "pasa": true
-      },
-      {
-        "prueba": "monotonia en la altura del observador",
-        "violaciones": 0,
-        "comprobaciones": 160,
-        "pasa": true
-      },
-      {
-        "prueba": "monotonia en la distancia sobre plano",
-        "violaciones": 0,
-        "comprobaciones": 6,
-        "pasa": true
-      },
-      {
-        "prueba": "monotonia en la altura de la barrera",
-        "violaciones": 0,
-        "comprobaciones": 7,
         "pasa": true
       }
     ],
     "pruebas": 19,
-    "fallos": 0
+    "fallos": 0,
+    "comprobacion_rasgo_decide": {
+      "regla": "cada caso se vuelve a ejecutar con su rasgo retirado (barrera u hondura a 0 m, objetivo a 0 m, o termino de curvatura apagado). En un caso de tipo 'rasgo' el veredicto debe cambiar; en un 'control' no debe cambiar. Un caso de rasgo cuyo veredicto no cambia aprueba por la razon equivocada.",
+      "casos_de_rasgo": 7,
+      "casos_de_rasgo_en_que_decide": 7,
+      "controles": 8,
+      "controles_consistentes": 8,
+      "casos_que_fallan_la_comprobacion": [],
+      "ok": true
+    },
+    "celda_m": 30.0,
+    "distancia_critica": {
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "r_eff_m": 7322988.505747126,
+      "exacta_m": 11618.375004826426,
+      "formula": "sqrt(2 R_eff h_obs) + sqrt(2 R_eff h_tgt): suma de las dos distancias al horizonte; la recta entre los extremos es tangente al abultamiento d(D-d)/2R_eff",
+      "aproximada_v1_m": 11733.37904902275,
+      "formula_v1": "sqrt(8 R_eff (h_obs + h_tgt) / 2): abultamiento en el punto medio igual a la altura media de la linea; solo exacta con h_obs == h_tgt, sobrestima en el resto",
+      "nota": "la version anterior del banco y del manuscrito usaba la formula v1 (11.73 km); el motor pierde la vista sobre un plano a 11.62 km, lo que la exacta predice. Los casos a 8.7 y 18.6 km se derivan de la exacta."
+    }
+  },
+  "propiedades_v1": {
+    "nombres": [
+      "reciprocidad de la vision",
+      "monotonia en la altura del observador",
+      "monotonia en la distancia sobre plano",
+      "monotonia en la altura de la barrera"
+    ],
+    "mutantes_detectados": 0,
+    "mutantes_evaluados": 5,
+    "cuales_por_mutante": {
+      "curvatura_restada": [],
+      "sin_curvatura": [],
+      "altura_objetivo_nula": [],
+      "extremos_incluidos": [],
+      "muestreo_grueso": []
+    },
+    "detalle": {
+      "curvatura_restada": {
+        "reciprocidad de la vision": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la altura del observador": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la distancia sobre plano": {
+          "violaciones": 0,
+          "comprobaciones": 6
+        },
+        "monotonia en la altura de la barrera": {
+          "violaciones": 0,
+          "comprobaciones": 7
+        }
+      },
+      "sin_curvatura": {
+        "reciprocidad de la vision": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la altura del observador": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la distancia sobre plano": {
+          "violaciones": 0,
+          "comprobaciones": 6
+        },
+        "monotonia en la altura de la barrera": {
+          "violaciones": 0,
+          "comprobaciones": 7
+        }
+      },
+      "altura_objetivo_nula": {
+        "reciprocidad de la vision": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la altura del observador": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la distancia sobre plano": {
+          "violaciones": 0,
+          "comprobaciones": 6
+        },
+        "monotonia en la altura de la barrera": {
+          "violaciones": 0,
+          "comprobaciones": 7
+        }
+      },
+      "extremos_incluidos": {
+        "reciprocidad de la vision": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la altura del observador": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la distancia sobre plano": {
+          "violaciones": 0,
+          "comprobaciones": 6
+        },
+        "monotonia en la altura de la barrera": {
+          "violaciones": 0,
+          "comprobaciones": 7
+        }
+      },
+      "muestreo_grueso": {
+        "reciprocidad de la vision": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la altura del observador": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        },
+        "monotonia en la distancia sobre plano": {
+          "violaciones": 0,
+          "comprobaciones": 6
+        },
+        "monotonia en la altura de la barrera": {
+          "violaciones": 0,
+          "comprobaciones": 7
+        }
+      }
+    },
+    "por_que": "las cuatro son condiciones necesarias —simetria en d <-> D-d y monotonia en las alturas y en la distancia— que cualquier motor con esa estructura cumple, averiado o no: los cinco mutantes las satisfacen. Son un ejemplo de la tesis del articulo aplicada a si mismo: pruebas que aprueban y no miden nada."
   },
   "mutantes": {
     "curvatura_restada": {
       "detectado": true,
       "equivalente": false,
       "comparaciones_equivalencia": 0,
-      "pruebas_que_saltan": 3,
+      "pruebas_que_saltan": 4,
       "de": 19,
       "cuales": [
-        "la misma barrera de 2 m si tapa a 12 km",
-        "plano bien por encima de la critica (18.8 km): la curvatura tapa",
+        "la misma barrera de 2 m si tapa a 9 km",
+        "plano bien por encima de la critica (18.6 km): la curvatura tapa",
+        "plano a 40 km: mas alla del horizonte geometrico",
+        "distancia critica derivada sobre plano"
+      ],
+      "casos_que_saltan": 3,
+      "de_casos": 15,
+      "cuales_casos": [
+        "la misma barrera de 2 m si tapa a 9 km",
+        "plano bien por encima de la critica (18.6 km): la curvatura tapa",
         "plano a 40 km: mas alla del horizonte geometrico"
-      ]
+      ],
+      "propiedades_que_saltan": 1,
+      "de_propiedades": 4,
+      "cuales_propiedades": [
+        "distancia critica derivada sobre plano"
+      ],
+      "muere_por_caso_y_propiedad": true,
+      "detalle_propiedades": {
+        "reciprocidad con alturas intercambiadas": {
+          "violaciones": 0,
+          "comprobaciones": 480
+        },
+        "obstaculo dominante en cualquier celda interior": {
+          "violaciones": 0,
+          "comprobaciones": 120
+        },
+        "distancia critica derivada sobre plano": {
+          "violaciones": 80,
+          "comprobaciones": 120
+        },
+        "alturas: subir nunca quita vista y basta para ver": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        }
+      }
     },
     "sin_curvatura": {
-      "detectado": true,
-      "equivalente": false,
-      "comparaciones_equivalencia": 0,
-      "pruebas_que_saltan": 3,
-      "de": 19,
-      "cuales": [
-        "la misma barrera de 2 m si tapa a 12 km",
-        "plano bien por encima de la critica (18.8 km): la curvatura tapa",
-        "plano a 40 km: mas alla del horizonte geometrico"
-      ]
-    },
-    "altura_objetivo_nula": {
       "detectado": true,
       "equivalente": false,
       "comparaciones_equivalencia": 0,
       "pruebas_que_saltan": 4,
       "de": 19,
       "cuales": [
+        "la misma barrera de 2 m si tapa a 9 km",
+        "plano bien por encima de la critica (18.6 km): la curvatura tapa",
+        "plano a 40 km: mas alla del horizonte geometrico",
+        "distancia critica derivada sobre plano"
+      ],
+      "casos_que_saltan": 3,
+      "de_casos": 15,
+      "cuales_casos": [
+        "la misma barrera de 2 m si tapa a 9 km",
+        "plano bien por encima de la critica (18.6 km): la curvatura tapa",
+        "plano a 40 km: mas alla del horizonte geometrico"
+      ],
+      "propiedades_que_saltan": 1,
+      "de_propiedades": 4,
+      "cuales_propiedades": [
+        "distancia critica derivada sobre plano"
+      ],
+      "muere_por_caso_y_propiedad": true,
+      "detalle_propiedades": {
+        "reciprocidad con alturas intercambiadas": {
+          "violaciones": 0,
+          "comprobaciones": 480
+        },
+        "obstaculo dominante en cualquier celda interior": {
+          "violaciones": 0,
+          "comprobaciones": 120
+        },
+        "distancia critica derivada sobre plano": {
+          "violaciones": 80,
+          "comprobaciones": 120
+        },
+        "alturas: subir nunca quita vista y basta para ver": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        }
+      }
+    },
+    "altura_objetivo_nula": {
+      "detectado": true,
+      "equivalente": false,
+      "comparaciones_equivalencia": 0,
+      "pruebas_que_saltan": 7,
+      "de": 19,
+      "cuales": [
         "barrera rebajada a 1 m a 3 km: no tapa",
         "barrera de 2 m: no tapa a 3 km",
         "mismo caso con objetivo de 30 m: se ve",
-        "plano justo por debajo de la distancia critica (8.8 km): se ve"
-      ]
+        "plano justo por debajo de la distancia critica (8.7 km): se ve",
+        "reciprocidad con alturas intercambiadas",
+        "distancia critica derivada sobre plano",
+        "alturas: subir nunca quita vista y basta para ver"
+      ],
+      "casos_que_saltan": 4,
+      "de_casos": 15,
+      "cuales_casos": [
+        "barrera rebajada a 1 m a 3 km: no tapa",
+        "barrera de 2 m: no tapa a 3 km",
+        "mismo caso con objetivo de 30 m: se ve",
+        "plano justo por debajo de la distancia critica (8.7 km): se ve"
+      ],
+      "propiedades_que_saltan": 3,
+      "de_propiedades": 4,
+      "cuales_propiedades": [
+        "reciprocidad con alturas intercambiadas",
+        "distancia critica derivada sobre plano",
+        "alturas: subir nunca quita vista y basta para ver"
+      ],
+      "muere_por_caso_y_propiedad": true,
+      "detalle_propiedades": {
+        "reciprocidad con alturas intercambiadas": {
+          "violaciones": 38,
+          "comprobaciones": 480
+        },
+        "obstaculo dominante en cualquier celda interior": {
+          "violaciones": 0,
+          "comprobaciones": 120
+        },
+        "distancia critica derivada sobre plano": {
+          "violaciones": 40,
+          "comprobaciones": 120
+        },
+        "alturas: subir nunca quita vista y basta para ver": {
+          "violaciones": 79,
+          "comprobaciones": 160
+        }
+      }
     },
     "extremos_incluidos": {
       "detectado": false,
@@ -165,17 +651,126 @@
       "comparaciones_equivalencia": 5888,
       "pruebas_que_saltan": 0,
       "de": 19,
-      "cuales": []
+      "cuales": [],
+      "casos_que_saltan": 0,
+      "de_casos": 15,
+      "cuales_casos": [],
+      "propiedades_que_saltan": 0,
+      "de_propiedades": 4,
+      "cuales_propiedades": [],
+      "muere_por_caso_y_propiedad": false,
+      "detalle_propiedades": {
+        "reciprocidad con alturas intercambiadas": {
+          "violaciones": 0,
+          "comprobaciones": 480
+        },
+        "obstaculo dominante en cualquier celda interior": {
+          "violaciones": 0,
+          "comprobaciones": 120
+        },
+        "distancia critica derivada sobre plano": {
+          "violaciones": 0,
+          "comprobaciones": 120
+        },
+        "alturas: subir nunca quita vista y basta para ver": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        }
+      },
+      "demostracion_equivalencia": "El termino de curvatura d(D-d)/2R se anula en d = 0 y en d = D, de modo que en los extremos z_corr[0] = z[0] y z_corr[-1] = z[-1], mientras que la linea vale z[0] + h_obs y z[-1] + h_tgt. Con h_obs >= 0 y h_tgt >= 0 la condicion de bloqueo nunca se cumple en los extremos: incluirlos no anade ningun bloqueo. El barrido solo lo confirma empiricamente; la equivalencia es un teorema para alturas no negativas, y deja de serlo con alturas negativas (vease el contraejemplo).",
+      "contraejemplo_alturas_negativas": {
+        "terreno": "escarpe de 100 m bajo el observador, valle llano",
+        "h_obs": -1.0,
+        "h_tgt": 3.0,
+        "distancia_km": 0.99,
+        "correcto": true,
+        "mutante": false,
+        "difieren": true
+      }
     },
     "muestreo_grueso": {
       "detectado": true,
       "equivalente": false,
       "comparaciones_equivalencia": 0,
-      "pruebas_que_saltan": 1,
+      "pruebas_que_saltan": 5,
       "de": 19,
       "cuales": [
-        "barrera de una sola celda a 3 km: tapa igual"
-      ]
+        "barrera de 50 m a 6 km: tapa",
+        "la misma barrera de 2 m si tapa a 9 km",
+        "barrera de una sola celda a 3 km: tapa igual",
+        "objetivo a ras de suelo tras loma de 12 m a 4 km: no se ve",
+        "obstaculo dominante en cualquier celda interior"
+      ],
+      "casos_que_saltan": 4,
+      "de_casos": 15,
+      "cuales_casos": [
+        "barrera de 50 m a 6 km: tapa",
+        "la misma barrera de 2 m si tapa a 9 km",
+        "barrera de una sola celda a 3 km: tapa igual",
+        "objetivo a ras de suelo tras loma de 12 m a 4 km: no se ve"
+      ],
+      "propiedades_que_saltan": 1,
+      "de_propiedades": 4,
+      "cuales_propiedades": [
+        "obstaculo dominante en cualquier celda interior"
+      ],
+      "muere_por_caso_y_propiedad": true,
+      "detalle_propiedades": {
+        "reciprocidad con alturas intercambiadas": {
+          "violaciones": 0,
+          "comprobaciones": 480
+        },
+        "obstaculo dominante en cualquier celda interior": {
+          "violaciones": 23,
+          "comprobaciones": 120
+        },
+        "distancia critica derivada sobre plano": {
+          "violaciones": 0,
+          "comprobaciones": 120
+        },
+        "alturas: subir nunca quita vista y basta para ver": {
+          "violaciones": 0,
+          "comprobaciones": 160
+        }
+      }
     }
+  },
+  "resumen": {
+    "casos": 15,
+    "propiedades": 4,
+    "pruebas": 19,
+    "casos_de_rasgo": 7,
+    "controles": 8,
+    "mutantes": 5,
+    "equivalentes": [
+      "extremos_incluidos"
+    ],
+    "no_equivalentes": [
+      "curvatura_restada",
+      "sin_curvatura",
+      "altura_objetivo_nula",
+      "muestreo_grueso"
+    ],
+    "muertos_por_algun_caso": [
+      "curvatura_restada",
+      "sin_curvatura",
+      "altura_objetivo_nula",
+      "muestreo_grueso"
+    ],
+    "muertos_por_alguna_propiedad": [
+      "curvatura_restada",
+      "sin_curvatura",
+      "altura_objetivo_nula",
+      "muestreo_grueso"
+    ],
+    "muertos_por_caso_y_propiedad": [
+      "curvatura_restada",
+      "sin_curvatura",
+      "altura_objetivo_nula",
+      "muestreo_grueso"
+    ],
+    "huecos": [],
+    "propiedades_v1_mutantes_detectados": 0,
+    "todo_mutante_no_equivalente_muere_por_caso_y_propiedad": true
   }
 }

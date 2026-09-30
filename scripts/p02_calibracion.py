@@ -35,9 +35,10 @@ import time
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from terrain_lab import (cobertura_orientaciones, colocacion_S0, colocacion_S1,
-                         contraste, densidad, desalineacion, forma_alargada,
-                         nulo_rigido, paisaje, region_ajustada)
+from terrain_lab import (N_SITIOS, PASOS_ORIENTACION, cobertura_orientaciones,
+                         colocacion_S0, colocacion_S1, contraste, densidad,
+                         desalineacion, forma_alargada, nulo_rigido, paisaje,
+                         region_ajustada)
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RES = os.path.join(BASE, "results")
@@ -211,7 +212,8 @@ def main():
 
     json.dump({"config": {"replicas": R_SEMILLAS, "n_null": N_NULL, "k_mejor": K_MEJOR,
                           "margen_ajustado_celdas": MARGEN_AJUSTADO, "alfa": ALFA,
-                          "semilla_base": SEMILLA_BASE},
+                          "semilla_base": SEMILLA_BASE,
+                          "n_sitios": N_SITIOS, "pasos_orientacion": PASOS_ORIENTACION},
                "replicas": reps, "resumen": res},
               open(os.path.join(RES, "calibracion.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)

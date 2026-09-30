@@ -1,151 +1,426 @@
 {
-  "motor": "GRASS r.viewshed 8.5.0 (QGIS 3.44.13)",
-  "nota_curvatura": "r.viewshed NO aplica curvatura salvo que se pase -c",
+  "motor": "GRASS r.viewshed 8.5.0 (binarios de QGIS 3.44.13)",
+  "version_grass": "GRASS 8.5.0",
+  "distribucion": "QGIS 3.44.13",
+  "invocacion": "grass85.bat -c <tif> <loc> --exec cmd /c run.bat, con r.in.gdal, g.region, r.viewshed y r.what; no se usa qgis_process ni el marco Processing de QGIS",
+  "elipsoide": "localizacion creada desde el GeoTIFF en EPSG:32719 (WGS 84): con -c r.viewshed usa a = 6378137 m como radio",
+  "nota_curvatura": "r.viewshed no aplica curvatura salvo con -c, ni refraccion salvo con -r; refraction_coeff no tiene efecto sin -r",
+  "defaults_documentados": {
+    "observer_elevation": 1.75,
+    "target_elevation": 0.0,
+    "max_distance": -1,
+    "refraction_coeff": 0.14286,
+    "memory": 500,
+    "flag_c": "Consider the curvature of the earth (current ellipsoid); apagada por defecto",
+    "flag_r": "Consider the effect of atmospheric refraction; apagada por defecto. Sin -r, refraction_coeff no tiene efecto (raster/r.viewshed/grass.cpp, adjust_for_curvature: if (!doRefr) return h - adjustment)",
+    "obligatorios": [
+      "input",
+      "output",
+      "coordinates"
+    ],
+    "fuente": "r.viewshed --help (GRASS 8.5.0), manual en linea y grass.cpp"
+  },
+  "corridas": {
+    "configurado": {
+      "orden": "r.viewshed input output coordinates observer_elevation=h_obs target_elevation=h_tgt refraction_coeff=0.13 -c -r",
+      "descripcion": "alturas del estudio, curvatura y refraccion con k = 0.13"
+    },
+    "de_fabrica": {
+      "orden": "r.viewshed input output coordinates",
+      "descripcion": "solo los parametros obligatorios; observer 1.75, target 0.0, sin -c ni -r"
+    },
+    "atribucion": "de fabrica mas un solo parametro al valor del estudio"
+  },
+  "comprobacion_refraccion": {
+    "h_obs": 1.7,
+    "h_tgt": 3.0,
+    "distancias_km": [
+      "10.50",
+      "11.01",
+      "11.31",
+      "11.49",
+      "11.70",
+      "12.00"
+    ],
+    "corridas": [
+      {
+        "modo": "sin banderas",
+        "veredictos": {
+          "10.50": true,
+          "11.01": true,
+          "11.31": true,
+          "11.49": true,
+          "11.70": true,
+          "12.00": true
+        }
+      },
+      {
+        "modo": "-c",
+        "veredictos": {
+          "10.50": true,
+          "11.01": false,
+          "11.31": false,
+          "11.49": false,
+          "11.70": false,
+          "12.00": false
+        }
+      },
+      {
+        "modo": "-c refraction_coeff=0.13 (sin -r; protocolo de la primera version)",
+        "veredictos": {
+          "10.50": true,
+          "11.01": false,
+          "11.31": false,
+          "11.49": false,
+          "11.70": false,
+          "12.00": false
+        }
+      },
+      {
+        "modo": "-c -r refraction_coeff=0.13",
+        "veredictos": {
+          "10.50": true,
+          "11.01": true,
+          "11.31": true,
+          "11.49": true,
+          "11.70": false,
+          "12.00": false
+        }
+      },
+      {
+        "modo": "-c -r (refraction_coeff de fabrica, 0.14286)",
+        "veredictos": {
+          "10.50": true,
+          "11.01": true,
+          "11.31": true,
+          "11.49": true,
+          "11.70": true,
+          "12.00": false
+        }
+      }
+    ],
+    "distancia_critica_predicha_km": {
+      "sin curvatura": null,
+      "-c (R = a = 6378137 m)": 10.842966988144125,
+      "-c -r 0.13 (R = a/(1-0.13))": 11.624880822821728,
+      "-c -r 0.14286 (R = a/(1-0.14286))": 11.711762428213403,
+      "motor del articulo (R = 6371000/(1-0.13))": 11.618375004826426
+    },
+    "c_y_cr_difieren": true,
+    "coef_sin_r_es_igual_que_c_solo": true
+  },
   "casos": 15,
-  "con_curvatura": {
+  "configurado": {
     "coinciden": 15,
     "discrepan": 0
   },
   "de_fabrica": {
-    "coinciden": 12,
-    "discrepan": 3
+    "coinciden": 10,
+    "discrepan": 5
+  },
+  "atribucion": {
+    "observer_elevation": {
+      "coinciden": 10,
+      "de": 15,
+      "descripcion": "de fabrica, salvo observer_elevation al valor del estudio"
+    },
+    "target_elevation": {
+      "coinciden": 12,
+      "de": 15,
+      "descripcion": "de fabrica, salvo target_elevation al valor del estudio"
+    },
+    "curvatura_y_refraccion": {
+      "coinciden": 11,
+      "de": 15,
+      "descripcion": "de fabrica, salvo curvatura_y_refraccion al valor del estudio"
+    }
   },
   "errores": 0,
   "detalle": [
     {
       "caso": "plano a 3 km: se ve",
       "esperado": true,
-      "con_curvatura": true,
+      "configurado": true,
       "coincide": true,
       "de_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": true,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 3.0,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
-      "caso": "barrera de 50 m a media distancia: tapa",
+      "caso": "barrera de 50 m a 6 km: tapa",
       "esperado": false,
-      "con_curvatura": false,
+      "configurado": false,
       "coincide": true,
       "de_fabrica": false,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": true,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 5.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
       "caso": "barrera rebajada a 1 m a 3 km: no tapa",
       "esperado": true,
-      "con_curvatura": true,
+      "configurado": true,
       "coincide": true,
-      "de_fabrica": true,
-      "coincide_fabrica": true,
-      "nota": null
+      "de_fabrica": false,
+      "coincide_fabrica": false,
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": false,
+        "target_elevation": true,
+        "curvatura_y_refraccion": false
+      },
+      "distancia_km": 2.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
       "caso": "depresion a 3 km: nunca tapa",
       "esperado": true,
-      "con_curvatura": true,
+      "configurado": true,
       "coincide": true,
       "de_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": true,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 2.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
       "caso": "barrera de 2 m: no tapa a 3 km",
       "esperado": true,
-      "con_curvatura": true,
+      "configurado": true,
       "coincide": true,
-      "de_fabrica": true,
-      "coincide_fabrica": true,
-      "nota": null
+      "de_fabrica": false,
+      "coincide_fabrica": false,
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": false,
+        "target_elevation": true,
+        "curvatura_y_refraccion": false
+      },
+      "distancia_km": 2.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
-      "caso": "la misma barrera de 2 m si tapa a 12 km",
+      "caso": "la misma barrera de 2 m si tapa a 9 km",
       "esperado": false,
-      "con_curvatura": false,
+      "configurado": false,
       "coincide": true,
-      "de_fabrica": true,
-      "coincide_fabrica": false,
-      "nota": null
+      "de_fabrica": false,
+      "coincide_fabrica": true,
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": false,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 8.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
       "caso": "barrera de una sola celda a 3 km: tapa igual",
       "esperado": false,
-      "con_curvatura": false,
+      "configurado": false,
       "coincide": true,
       "de_fabrica": false,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": true,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 2.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
-      "caso": "objetivo a ras de suelo tras loma de 12 m: no se ve",
+      "caso": "objetivo a ras de suelo tras loma de 12 m a 4 km: no se ve",
       "esperado": false,
-      "con_curvatura": false,
+      "configurado": false,
       "coincide": true,
       "de_fabrica": false,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": true,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 3.99,
+      "h_obs": 1.7,
+      "h_tgt": 0.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=0.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
       "caso": "mismo caso con objetivo de 30 m: se ve",
       "esperado": true,
-      "con_curvatura": true,
+      "configurado": true,
       "coincide": true,
-      "de_fabrica": true,
-      "coincide_fabrica": true,
-      "nota": null
+      "de_fabrica": false,
+      "coincide_fabrica": false,
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": false,
+        "target_elevation": true,
+        "curvatura_y_refraccion": false
+      },
+      "distancia_km": 3.99,
+      "h_obs": 1.7,
+      "h_tgt": 30.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=30.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
       "caso": "observador sobre una cima: no se tapa a si mismo",
       "esperado": true,
-      "con_curvatura": true,
+      "configurado": true,
       "coincide": true,
       "de_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": true,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 5.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
       "caso": "objetivo sobre una cima: sigue viendose",
       "esperado": true,
-      "con_curvatura": true,
+      "configurado": true,
       "coincide": true,
       "de_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": true,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 5.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
-      "caso": "plano justo por debajo de la distancia critica (8.8 km): se ve",
+      "caso": "plano justo por debajo de la distancia critica (8.7 km): se ve",
       "esperado": true,
-      "con_curvatura": true,
+      "configurado": true,
       "coincide": true,
       "de_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": true,
+        "curvatura_y_refraccion": false
+      },
+      "distancia_km": 8.7,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
-      "caso": "plano bien por encima de la critica (18.8 km): la curvatura tapa",
+      "caso": "plano bien por encima de la critica (18.6 km): la curvatura tapa",
       "esperado": false,
-      "con_curvatura": false,
+      "configurado": false,
       "coincide": true,
       "de_fabrica": true,
       "coincide_fabrica": false,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": false,
+        "target_elevation": false,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 18.57,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
       "caso": "plano a 40 km: mas alla del horizonte geometrico",
       "esperado": false,
-      "con_curvatura": false,
+      "configurado": false,
       "coincide": true,
       "de_fabrica": true,
       "coincide_fabrica": false,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": false,
+        "target_elevation": false,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 39.99,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     },
     {
       "caso": "plano a 1 km: la curvatura no cambia nada",
       "esperado": true,
-      "con_curvatura": true,
+      "configurado": true,
       "coincide": true,
       "de_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "observer_elevation": true,
+        "target_elevation": true,
+        "curvatura_y_refraccion": true
+      },
+      "distancia_km": 0.99,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "orden_configurado": "r.viewshed input=dem output=vs coordinates=15.0,45.0 observer_elevation=1.7 target_elevation=3.0 refraction_coeff=0.13 -c -r",
+      "orden_de_fabrica": "r.viewshed input=dem output=vs coordinates=15.0,45.0"
     }
   ]
 }

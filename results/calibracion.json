@@ -5,7 +5,9 @@
     "k_mejor": 40,
     "margen_ajustado_celdas": 25,
     "alfa": 0.05,
-    "semilla_base": 20260830
+    "semilla_base": 20260830,
+    "n_sitios": 32,
+    "pasos_orientacion": 360
   },
   "replicas": [
     {

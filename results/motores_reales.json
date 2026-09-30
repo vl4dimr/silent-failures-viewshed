@@ -1,10 +1,41 @@
 {
-  "motor": "gdal_viewshed (QGIS 3.44.13)",
+  "motor": "gdal_viewshed (GDAL 3.13.2, binarios de QGIS 3.44.13)",
+  "version_gdal": "GDAL 3.13.2 \"Iowa City\", released 2026/07/20",
+  "distribucion": "QGIS 3.44.13",
+  "invocacion": "ejecutable gdal_viewshed.exe llamado directamente por subprocess; no se usa qgis_process ni el marco Processing de QGIS",
   "cc_ajustado": 0.87,
   "parametros_de_fabrica": {
     "oz": 2.0,
     "tz": 0.0,
     "cc": 0.85714
+  },
+  "defaults_documentados": {
+    "oz": 2.0,
+    "tz": 0.0,
+    "cc": 0.85714,
+    "md": "sin limite",
+    "vv": 255,
+    "iv": 0,
+    "ov": 0,
+    "om": "NORMAL",
+    "obligatorios": [
+      "-ox",
+      "-oy",
+      "<src_filename>",
+      "<dst_filename>"
+    ],
+    "fuente": "gdal_viewshed --long-usage (GDAL 3.13.2) y gdal.org/programs/gdal_viewshed.html"
+  },
+  "corridas": {
+    "configurado": {
+      "argumentos": "-ox -oy -oz h_obs -tz h_tgt -cc 0.87 <src> <dst>",
+      "descripcion": "alturas del estudio y curvatura+refraccion con k = 0.13"
+    },
+    "de_fabrica": {
+      "argumentos": "-ox -oy <src> <dst>",
+      "descripcion": "solo los argumentos obligatorios; -oz, -tz y -cc quedan en sus valores de fabrica (2, 0, 0.85714)"
+    },
+    "atribucion": "de fabrica mas un solo parametro (-oz, -tz o -cc) al valor del estudio"
   },
   "casos": 15,
   "ajustado": {
@@ -15,6 +46,23 @@
     "coinciden": 11,
     "discrepan": 4
   },
+  "atribucion": {
+    "oz": {
+      "coinciden": 11,
+      "de": 15,
+      "descripcion": "de fabrica, salvo -oz devuelto al valor del estudio"
+    },
+    "tz": {
+      "coinciden": 15,
+      "de": 15,
+      "descripcion": "de fabrica, salvo -tz devuelto al valor del estudio"
+    },
+    "cc": {
+      "coinciden": 11,
+      "de": 15,
+      "descripcion": "de fabrica, salvo -cc devuelto al valor del estudio"
+    }
+  },
   "errores": 0,
   "detalle": [
     {
@@ -24,16 +72,36 @@
       "coincide": true,
       "gdal_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 3.0,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
-      "caso": "barrera de 50 m a media distancia: tapa",
+      "caso": "barrera de 50 m a 6 km: tapa",
       "esperado": false,
       "gdal": false,
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 5.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
       "caso": "barrera rebajada a 1 m a 3 km: no tapa",
@@ -42,7 +110,17 @@
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": false,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": false,
+        "tz": true,
+        "cc": false
+      },
+      "distancia_km": 2.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
       "caso": "depresion a 3 km: nunca tapa",
@@ -51,7 +129,17 @@
       "coincide": true,
       "gdal_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 2.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
       "caso": "barrera de 2 m: no tapa a 3 km",
@@ -60,16 +148,36 @@
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": false,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": false,
+        "tz": true,
+        "cc": false
+      },
+      "distancia_km": 2.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
-      "caso": "la misma barrera de 2 m si tapa a 12 km",
+      "caso": "la misma barrera de 2 m si tapa a 9 km",
       "esperado": false,
       "gdal": false,
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 8.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
       "caso": "barrera de una sola celda a 3 km: tapa igual",
@@ -78,16 +186,36 @@
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 2.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
-      "caso": "objetivo a ras de suelo tras loma de 12 m: no se ve",
+      "caso": "objetivo a ras de suelo tras loma de 12 m a 4 km: no se ve",
       "esperado": false,
       "gdal": false,
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 3.99,
+      "h_obs": 1.7,
+      "h_tgt": 0.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 0.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
       "caso": "mismo caso con objetivo de 30 m: se ve",
@@ -96,7 +224,17 @@
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": false,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": false,
+        "tz": true,
+        "cc": false
+      },
+      "distancia_km": 3.99,
+      "h_obs": 1.7,
+      "h_tgt": 30.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 30.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
       "caso": "observador sobre una cima: no se tapa a si mismo",
@@ -105,7 +243,17 @@
       "coincide": true,
       "gdal_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 5.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
       "caso": "objetivo sobre una cima: sigue viendose",
@@ -114,25 +262,55 @@
       "coincide": true,
       "gdal_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 5.97,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
-      "caso": "plano justo por debajo de la distancia critica (8.8 km): se ve",
+      "caso": "plano justo por debajo de la distancia critica (8.7 km): se ve",
       "esperado": true,
       "gdal": true,
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": false,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": false,
+        "tz": true,
+        "cc": false
+      },
+      "distancia_km": 8.7,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
-      "caso": "plano bien por encima de la critica (18.8 km): la curvatura tapa",
+      "caso": "plano bien por encima de la critica (18.6 km): la curvatura tapa",
       "esperado": false,
       "gdal": false,
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 18.57,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
       "caso": "plano a 40 km: mas alla del horizonte geometrico",
@@ -141,7 +319,17 @@
       "coincide": true,
       "gdal_fabrica": false,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 39.99,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     },
     {
       "caso": "plano a 1 km: la curvatura no cambia nada",
@@ -150,7 +338,17 @@
       "coincide": true,
       "gdal_fabrica": true,
       "coincide_fabrica": true,
-      "nota": null
+      "nota": null,
+      "atribucion_coincide": {
+        "oz": true,
+        "tz": true,
+        "cc": true
+      },
+      "distancia_km": 0.99,
+      "h_obs": 1.7,
+      "h_tgt": 3.0,
+      "argumentos_configurado": "-ox 15.000000 -oy 45.000000 -oz 1.7000 -tz 3.0000 -cc 0.870000",
+      "argumentos_de_fabrica": "-ox 15.000000 -oy 45.000000"
     }
   ]
 }
