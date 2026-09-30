@@ -600,7 +600,7 @@ P("Archaeological visibility analysis, a methodological tradition reviewed by La
 
 P("A recent intervisibility study of %d archaeological sites in the Titicaca basin documented "
   "three such defects encountered, and corrected, during its own analysis (deposited as Mamani "
-  "Calisaya et al., 2026; a manuscript reporting it is under review). The sign of the "
+  "Calisaya et al., 2026; the study itself is reported in a separate manuscript). The sign of the "
   "Earth-curvature correction was inverted, which renders the Earth concave and lets no relief "
   "block any long-range view. The elevation model assigned a constant elevation to the lake, a "
   "perfect plane covering %s %% of the study area that blocked nothing and inflated the null model "

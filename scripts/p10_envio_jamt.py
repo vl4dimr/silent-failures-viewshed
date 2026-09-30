@@ -105,7 +105,7 @@ CARTA = [
     "plausible output, survive both peer review and re-execution, and invert or erase the "
     "conclusion of the study containing them. Three were documented, and corrected, in an "
     "intervisibility study of the Titicaca basin whose pre-correction runs are openly deposited; "
-    "a manuscript reporting that study is under review elsewhere, and the present paper uses its "
+    "that study is reported in a separate manuscript, and the present paper uses its "
     "three defects only as a specimen.",
 
     "Three methodological contributions follow. The first is an executable benchmark for "
