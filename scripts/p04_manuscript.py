@@ -1473,8 +1473,8 @@ REFERENCES = [
     "Mamani Calisaya, M. V., Mamani Calisaya, D. N., Alanoca Arocutipa, V., & Alanoca Laura, S. L. "
     "(2026). *Intervisibilidad de sitios arqueológicos en la cuenca del Titicaca: Código, datos "
     "derivados y contraejemplos* [Intervisibility of archaeological sites in the Titicaca basin: "
-    "Code, derived data and counterexamples] (Version 1.2.0) [Computer software and data set]. "
-    "Zenodo. https://doi.org/10.5281/zenodo.23050689",
+    "Code, derived data and counterexamples] (Version 1.3.0) [Computer software and data set]. "
+    "Zenodo. https://doi.org/10.5281/zenodo.23083731",
     "Marwick, B. (2017). Computational reproducibility in archaeological research: Basic principles "
     "and a case study of their implementation. *Journal of Archaeological Method and Theory, "
     "24*(2), 424–450. https://doi.org/10.1007/s10816-015-9272-9",
