@@ -68,16 +68,13 @@ shutil.copyfile(MS, os.path.join(OUT, "1_MANUSCRIPT.docx"))
 for n, base in enumerate(["fig_pipeline", "fig_anatomia", "fig_laboratorio",
                           "fig_consecuencias"], start=1):
     shutil.copyfile(os.path.join(FIG, base + ".pdf"), os.path.join(OUT, "Fig%d.pdf" % n))
-    tif = os.path.join(FIG, base + ".tif")
-    if os.path.exists(tif):
-        shutil.copyfile(tif, os.path.join(OUT, "Fig%d.tif" % n))
-    else:
-        # el pipeline no exporta TIFF: se aplana su PNG a RGB con la misma resolucion
-        im = Image.open(os.path.join(FIG, base + ".png"))
-        fondo = Image.new("RGB", im.size, "white")
-        fondo.paste(im.convert("RGBA"), mask=im.convert("RGBA").split()[-1])
-        fondo.save(os.path.join(OUT, "Fig%d.tif" % n), dpi=im.info.get("dpi", (300, 300)),
-                   compression="tiff_lzw")
+    # TIFF de produccion a 600 ppp, rasterizado desde el PDF vectorial: Springer
+    # pide 600 ppp para figuras que combinan trazo y tono continuo.
+    import fitz
+    with fitz.open(os.path.join(FIG, base + ".pdf")) as pdf:
+        pix = pdf[0].get_pixmap(dpi=600, alpha=False)
+    im = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+    im.save(os.path.join(OUT, "Fig%d.tif" % n), dpi=(600, 600), compression="tiff_lzw")
 
 # comprobaciones del paquete
 ficheros = sorted(os.listdir(OUT))
@@ -85,7 +82,8 @@ assert not [f for f in ficheros if f.lower().endswith(".svg")], "queda un .svg"
 for n in range(1, 5):
     assert "Fig%d.pdf" % n in ficheros and "Fig%d.tif" % n in ficheros, n
     im = Image.open(os.path.join(OUT, "Fig%d.tif" % n))
-    assert im.mode == "RGB" and im.info.get("dpi", (0, 0))[0] >= 299, (n, im.mode, im.info.get("dpi"))
+    assert im.mode == "RGB" and im.info.get("dpi", (0, 0))[0] >= 599, (n, im.mode, im.info.get("dpi"))
+    assert im.width / 600 * 25.4 <= 174.5, ("ancho en mm", n, im.width / 600 * 25.4)
     with open(os.path.join(OUT, "Fig%d.pdf" % n), "rb") as fh:
         assert fh.read(5) == b"%PDF-", n
 
