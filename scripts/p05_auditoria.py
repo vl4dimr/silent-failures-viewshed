@@ -457,7 +457,7 @@ def main():
     check("prosa", "toda referencia con DOI lo lleva como enlace completo",
           len(con_doi) >= len(refs) - 1, "%d de %d" % (len(con_doi), len(refs)))
     check("prosa", "depósito del estudio de campo citado en su versión con DOI de versión",
-          "(Version 1.2.0)" in "\n".join(refs) and "10.5281/zenodo.23050689" in "\n".join(refs))
+          "(Version 1.3.0)" in "\n".join(refs) and "10.5281/zenodo.23083731" in "\n".join(refs))
     check("prosa", "depósito propio en la lista y en la disponibilidad de datos",
           "zenodo.22242923" in "\n".join(refs) and "(Mamani Calisaya, 2026)" in cuerpo_orden)
 

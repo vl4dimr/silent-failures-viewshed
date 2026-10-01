@@ -1,6 +1,6 @@
 {
-  "ok": 106,
-  "fallos": 1,
+  "ok": 107,
+  "fallos": 0,
   "items": [
     {
       "bloque": "formato",
@@ -455,7 +455,7 @@
     {
       "bloque": "prosa",
       "check": "depósito del estudio de campo citado en su versión con DOI de versión",
-      "ok": false,
+      "ok": true,
       "detalle": ""
     },
     {
